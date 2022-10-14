@@ -68,11 +68,12 @@ h4 {
 a {
   color: var(--color-primary);
   text-decoration: none;
+  font-weight: bold;
   transition: color 200ms;
 
   &:hover,
   &:focus,
   &:active {
-    color: var(--color-primary-rotate);
+    color: var(--color-highlight);
   }
 }

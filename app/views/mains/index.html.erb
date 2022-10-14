@@ -1,4 +1,6 @@
 <%= render partial: "shared/topbar" %>
+<%= render partial: "shared/navbar" %>
 <%= turbo_frame_tag "posts" do%>
   <%= render partial: "posts/index" %>
+  <%= link_to 'New Post', new_post_path %>
 <% end %>

@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  def index
+    @posts = Post.all
+  end
+
   def show
-    @post = Post.find(params['id'])
+    @comments = Comment.where(post_id: @post.id)
   end
 
   def new
@@ -8,31 +13,38 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create! params.require(:post).permt(:title,:content)
-
-    # if @post.save
-    #   redirect_to @post
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    @post = Post.new(post_params)
+    p @post
+    if @post.save
+      redirect_to @post
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
-    @post = Post.find(params['id'])
   end
 
   def update
-    @post = Post.find(params['id'])
-
-    if @post.update(params)
+    if @post.update(post_params)
       redirect_to @post
     else
       render :edit, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @post.destroy
+
+    redirect_to root_path
+  end
   private
 
+  def set_post
+    @post = Post.find(params['id'])
+  end
+
   def post_params
-    params.permit(:post).require(:title, :body)
+    params.require(:post).permit(:title, :content, :thumbnail)
   end
 end
