@@ -1,0 +1,4 @@
+<%= render partial: "shared/topbar" %>
+<%= turbo_frame_tag "posts" do%>
+  <%= render partial: "posts/index" %>
+<% end %>

@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "posts" do %>
+
+<h1><%= @post.title %></h1>
+
+<h1><%= @post.content %></h1>
+
+<%= link_to "go back", root_path%>
+
+<% end %>
