@@ -1,0 +1,33 @@
+.posts {
+  padding-top: --space-m;
+  display: flex;
+  gap: 40px;
+
+  .thumbnail {
+      display: block;
+      width: 400px;
+      height: 298px;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      opacity: 0.8;
+
+      &:hover {
+        opacity:0.95;
+        transition: 100ms;
+      }
+      &:focus,
+      &:focus-within,
+      &:active {
+      }
+    }
+
+  .linktext {
+      display: flex;
+      opacity: 1;
+      color: var(--color-dark);
+      background-color: var(--color-primary-rotate);
+      font-weight: bold;
+      font-size:var(--font-size-m);
+  }
+}
+

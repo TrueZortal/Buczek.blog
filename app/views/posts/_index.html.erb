@@ -1,7 +1,9 @@
-<% @posts.each do |post| %>
-  <li>
-    <div class = "thumbnail thumbnail" style="--thumbnail: <%= url_for(post.thumbnail) %>" >
-    <%= link_to post.title, post%>
-    </div>
-  </li>
-<% end %>
+<div class = "posts">
+  <% @posts.each do |post| %>
+      <%= link_to post_path(post.id) do %>
+        <div class = "thumbnail" style="background-image: url(<%= url_for(post.thumbnail) %>)" >
+        <h5 class = "linktext"><%= post.title %></h5>
+        </div>
+      <% end %>
+  <% end %>
+</div>

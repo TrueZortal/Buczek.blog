@@ -1,5 +1,5 @@
 // Mixins
-@import "mixins/media";
+@import "utilities/media";
 
 // Configuration
 @import "config/variables";
@@ -7,7 +7,7 @@
 
 // Components
 @import "components/btn";
-@import "components/thumbnail";
+// @import "components/thumbnail";
 // @import "components/error_message";
 // @import "components/form";
 // @import "components/visually_hidden";

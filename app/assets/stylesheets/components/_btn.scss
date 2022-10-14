@@ -56,16 +56,21 @@
     }
   }
 
-  &--dark {
+  &--menu {
     color: var(--color-white);
     border-color: var(--color-dark);
     background-color: var(--color-dark);
+    transition: 1000ms;
+    padding: auto;
 
-    &:hover,
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-dark);
+      transition: 500ms;
+    }
     &:focus,
     &:focus-within,
     &:active {
-      color: var(--color-white);
     }
   }
 }
