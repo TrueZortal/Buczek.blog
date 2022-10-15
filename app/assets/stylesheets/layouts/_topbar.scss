@@ -32,4 +32,22 @@ padding-bottom: var(--space-m);
   margin-left: auto;
   margin-right: 5%;
 }
+
+.signin {
+
+}
+
+.login_link {
+
+}
+
+.logout {
+  display:flex;
+  justify-content: right;
+}
+
+.logout_link {
+  font-size: var(--font-size-xs);
+  text-align: right;
+}
 }

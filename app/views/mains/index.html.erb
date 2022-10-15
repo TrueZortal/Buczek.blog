@@ -2,10 +2,12 @@
   <div data-turbo-permanent>
     <%= render partial: "shared/topbar" %>
   </div>
+  <% if user_signed_in? && current_user.admin %>
+    <%= link_to 'New Post', new_post_path, data: { turbo_frame: "main" }, class: "btn btn--admin" %>
+  <% end %>
   <div class = "main_display">
     <%= turbo_frame_tag "main" do %>
       <%= render partial: "posts/index" %>
-      <%= link_to 'New Post', new_post_path %>
     <% end %>
   </div>
 </div>

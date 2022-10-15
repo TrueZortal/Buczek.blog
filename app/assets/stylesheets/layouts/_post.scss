@@ -40,3 +40,35 @@
   font-weight: bold;
   font-size:var(--font-size-xxxl);
 }
+
+.gobackdiv {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+hr.full_line {
+  border-top: 1px solid rgb(122, 121, 121);
+}
+
+.partial_line {
+  width: 10%;
+  height: 1px;
+  background-color: rgb(122, 121, 121);
+  opacity: 0.5;
+}
+
+.comment {
+  .username {
+    font-size:var(--font-size-s);
+  }
+
+  .timestamp {
+    font-size:var(--font-size-xxs);
+  }
+
+  .body {
+    font-size:var(--font-size-s);
+  }
+
+}

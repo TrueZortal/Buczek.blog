@@ -1,9 +1,6 @@
 <%= turbo_frame_tag "comments" do %>
   <%= form_with url: post_comments_path do |form| %>
-    <div>
-      <%= form.text_area :user %>
-      <%= form.label :user, "My name:" %>
-    </div>
+      <%= form.hidden_field :user, value: current_user.email %>
     <div>
       <%= form.text_area :body %>
       <%= form.label :body, "Comment:" %>

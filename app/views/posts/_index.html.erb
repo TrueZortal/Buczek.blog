@@ -8,6 +8,10 @@
             <div class = "highlight_linkbox">
               <h5 class = "highlight_linktext"><%= post.title %></h5>
             </div>
+            <% if user_signed_in? && current_user.admin %>
+              <%= link_to "edit", edit_post_path(post.id), class: "btn btn--admin"%>
+              <%= link_to "delete", post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
+            <% end %>
           </div>
         <% end %>
       <% end %>
@@ -33,6 +37,10 @@
             <div class = "linkbox">
               <h5 class = "linktext"><%= post.title %></h5>
             </div>
+            <% if user_signed_in? && current_user.admin %>
+              <%= link_to "edit", edit_post_path(post.id), class: "btn btn--admin"%>
+              <%= link_to "delete", post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
+            <% end %>
           </div>
         <% end %>
       <% if index < 3 %>

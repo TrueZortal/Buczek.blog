@@ -7,23 +7,34 @@
       </div>
     </div>
   </div>
+  <div class = "gobackdiv">
+      <%= link_to "go back", root_path, class: "btn btn--goback"%>
+    </div>
+  <hr class = "full_line">
   <h3><%= @post.content %></h3>
-
-  <%= link_to "go back", root_path, class: "btn btn--primary"%>
-  <%= link_to "edit", edit_post_path, class: "btn btn--primary"%>
-  <%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--primary"%>
+  <% if user_signed_in? && current_user.admin %>
+    <%= link_to "edit", edit_post_path, class: "btn btn--admin"%>
+    <%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
+  <% end %>
   <br>
-  <br>
-  <br>
-  <h4>comments:</h4>
   <%= turbo_frame_tag "comments" do %>
+  <% if user_signed_in? %>
+    <%= link_to "New comment", new_post_comment_path(post_id: @post.id) , class: "btn btn--comment" %>
+  <% else %>
+    <h4> login to comment! </h4>
+  <% end%>
+  <hr class = "full_line">
     <% @comments.each do |comment| %>
-      <h4> <%= comment.user %> </h4>
-      <h6> <%= comment.created_at %> </h6>
-      <h5> <%= comment.body %> </h5>
-      <br>
+      <div class = "comment">
+        <p class = "username"> <%= comment.user %> </p>
+        <p class = "timestamp"> <%= comment.created_at %> </p>
+        <p class = "body"> <%= comment.body %> </p>
+      </div>
+      <% if user_signed_in? && current_user.admin || current_user.email == comment.user %>
+        <%= link_to "delete", [comment.post, comment], data: { turbo_method: :delete, turbo_confirm: "Deleting comment, confirm?" }, class: "btn btn--comment"%>
+      <% end %>
+      <div class = "partial_line"></div>
     <% end %>
-    <%= link_to "New comment", new_post_comment_path(post_id: @post.id) , class: "btn btn--secondary" %>
   <% end %>
 </div>
 <% end %>
