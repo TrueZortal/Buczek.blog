@@ -1,8 +1,9 @@
 <div class="container">
   <%= render partial: "shared/topbar" %>
-  <%= render partial: "shared/navbar" %>
-  <%= turbo_frame_tag "main" do %>
-    <%= render partial: "posts/index" %>
-    <%= link_to 'New Post', new_post_path %>
-  <% end %>
+  <div class = "main_display">
+    <%= turbo_frame_tag "main" do %>
+      <%= render partial: "posts/index" %>
+      <%= link_to 'New Post', new_post_path %>
+    <% end %>
+  </div>
 </div>

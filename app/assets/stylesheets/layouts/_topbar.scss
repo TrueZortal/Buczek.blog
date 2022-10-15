@@ -1,0 +1,29 @@
+.topbar {
+display: flex;
+align-items: center;
+padding-bottom: var(--space-m);
+
+.verticalline {
+  border-left: 2px solid black;
+  height: var(--space-xl);
+  width:var(--space-xxxs);
+}
+
+.banner {
+  width: 15%;
+
+  .bannertext{
+  font-size: var(--font-size-xxxl);
+  color: var(--color-text-header);
+  text-align: center;
+}
+
+}
+
+.navbar {
+  display: flex;
+  gap: var(--space-s);
+  padding-right: var(--space-xs);
+  padding-left: var(--space-s);
+}
+}

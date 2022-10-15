@@ -3,6 +3,25 @@
   display: flex;
   gap: 40px;
 
+  .highlight_thumbnail {
+    display: block;
+      width: 800px;
+      height: 596px;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      opacity: 0.8;
+      min-width: 0;
+
+      &:hover {
+        opacity:0.95;
+        transition: 100ms;
+      }
+      &:focus,
+      &:focus-within,
+      &:active {
+      }
+  }
+
   .thumbnail {
       display: block;
       width: 400px;
@@ -10,6 +29,7 @@
       border: var(--border);
       border-radius: var(--border-radius);
       opacity: 0.8;
+      min-width: 0;
 
       &:hover {
         opacity:0.95;

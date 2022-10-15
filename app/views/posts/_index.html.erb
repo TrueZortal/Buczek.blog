@@ -1,9 +1,51 @@
 <div class = "posts">
-  <% @posts.each do |post| %>
-      <%= link_to post_path(post.id) do %>
-        <div class = "thumbnail" style="background-image: url(<%= url_for(post.thumbnail) %>)" >
-        <h5 class = "linktext"><%= post.title %></h5>
-        </div>
+  <table>
+  <tr>
+    <td rowspan="2" colspan="2">
+      <% @posts.to_a.shift(1).each do |post|%>
+        <%= link_to post_path(post.id) do %>
+          <div class = "highlight_thumbnail" style="background-image: url(<%= url_for(post.thumbnail.variant(:center)) %>)" >
+            <h5 class = "highlight_linktext"><%= post.title %></h5>
+          </div>
+        <% end %>
       <% end %>
-  <% end %>
+    </td>
+    <% @posts.each_with_index do |post, index| %>
+      <% next if index == 0%>
+
+      <% if index < 3 %>
+        <td>
+      <% elsif index == 3 %>
+        <tr>
+          <td>
+      <% elsif index < 5 %>
+        <td>
+      <% elsif index == 5 || (index - 5) % 4 == 0 %>
+        <tr>
+          <td>
+      <% else %>
+          <td>
+      <% end %>
+        <%= link_to post_path(post.id) do %>
+          <div class = "thumbnail" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)" >
+            <h5 class = "linktext"><%= post.title %></h5>
+          </div>
+        <% end %>
+      <% if index < 3 %>
+        </td>
+      <% elsif index == 3 %>
+          </td>
+      <% elsif index == 4 %>
+        </td>
+          </tr>
+      <% elsif index < 5 %>
+        </td>
+      <% elsif index % 4 == 0 %>
+        </td>
+         </tr>
+      <% else %>
+        </td>
+      <% end %>
+    <% end %>
+  </table>
 </div>
