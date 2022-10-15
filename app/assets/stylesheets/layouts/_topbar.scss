@@ -11,7 +11,7 @@ padding-bottom: var(--space-m);
 
 .banner {
   width: 15%;
-
+  min-width: 200px;
   .bannertext{
   font-size: var(--font-size-xxxl);
   color: var(--color-text-header);

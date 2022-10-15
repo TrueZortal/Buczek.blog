@@ -1,23 +1,29 @@
 <%= turbo_frame_tag "main" do %>
+<div class = "post_body">
+  <div class = "post_title_box">
+    <div class = "post_topper" style="background-image: url(<%= url_for(@post.thumbnail.variant(:center)) %>)" >
+      <div class = "post_highlightbox">
+        <h1 class = "post_title"><%= @post.title %></h1>
+      </div>
+    </div>
+  </div>
+  <h3><%= @post.content %></h3>
 
-<h2><%= @post.title %></h2>
-<h3><%= @post.content %></h3>
-
-<%= link_to "go back", root_path, class: "btn btn--primary"%>
-<%= link_to "edit", edit_post_path, class: "btn btn--primary"%>
-<%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--primary"%>
-<br>
-<br>
-<br>
-<h4>comments:</h4>
-<%= turbo_frame_tag "comments" do %>
-  <% @comments.each do |comment| %>
-    <h4> <%= comment.user %> </h4>
-    <h6> <%= comment.created_at %> </h6>
-    <h5> <%= comment.body %> </h5>
-    <br>
+  <%= link_to "go back", root_path, class: "btn btn--primary"%>
+  <%= link_to "edit", edit_post_path, class: "btn btn--primary"%>
+  <%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--primary"%>
+  <br>
+  <br>
+  <br>
+  <h4>comments:</h4>
+  <%= turbo_frame_tag "comments" do %>
+    <% @comments.each do |comment| %>
+      <h4> <%= comment.user %> </h4>
+      <h6> <%= comment.created_at %> </h6>
+      <h5> <%= comment.body %> </h5>
+      <br>
+    <% end %>
+    <%= link_to "New comment", new_post_comment_path(post_id: @post.id) , class: "btn btn--secondary" %>
   <% end %>
-  <%= link_to "New comment", new_post_comment_path(post_id: @post.id) , class: "btn btn--secondary" %>
-<% end %>
-
+</div>
 <% end %>

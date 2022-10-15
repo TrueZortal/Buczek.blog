@@ -1,5 +1,5 @@
 class MainsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.ordered
   end
 end

@@ -1,5 +1,7 @@
 <div class="container">
-  <%= render partial: "shared/topbar" %>
+  <div data-turbo-permanent>
+    <%= render partial: "shared/topbar" %>
+  </div>
   <div class = "main_display">
     <%= turbo_frame_tag "main" do %>
       <%= render partial: "posts/index" %>

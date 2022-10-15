@@ -1,11 +1,13 @@
 <div class = "posts">
-  <table>
+  <table class = "posts_table">
   <tr>
     <td rowspan="2" colspan="2">
       <% @posts.to_a.shift(1).each do |post|%>
         <%= link_to post_path(post.id) do %>
           <div class = "highlight_thumbnail" style="background-image: url(<%= url_for(post.thumbnail.variant(:center)) %>)" >
-            <h5 class = "highlight_linktext"><%= post.title %></h5>
+            <div class = "highlight_linkbox">
+              <h5 class = "highlight_linktext"><%= post.title %></h5>
+            </div>
           </div>
         <% end %>
       <% end %>
@@ -28,7 +30,9 @@
       <% end %>
         <%= link_to post_path(post.id) do %>
           <div class = "thumbnail" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)" >
-            <h5 class = "linktext"><%= post.title %></h5>
+            <div class = "linkbox">
+              <h5 class = "linktext"><%= post.title %></h5>
+            </div>
           </div>
         <% end %>
       <% if index < 3 %>
