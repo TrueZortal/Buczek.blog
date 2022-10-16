@@ -13,7 +13,7 @@
   <% end %>
     <div class="field">
       <%= form.label :thumbnail %>
-      <%= form.file_field :thumbnail, accept: 'image/png,image/gif,image/jpeg', multiple: true %>
+      <%= form.file_field :thumbnail, accept: 'image/png,image/gif,image/jpeg', direct_upload: true %>
     </div>
     <div class="field">
       <%= form.label :title %>
