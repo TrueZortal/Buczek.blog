@@ -25,6 +25,15 @@ body {
   font-family: var(--font-family-sans);
 }
 
+#footer {
+  align-items: center;
+  justify-content: center;
+  margin-top:auto;
+  display: flex;
+  flex: 0 0 50px;
+  clear:both;
+}
+
 img,
 picture,
 svg {

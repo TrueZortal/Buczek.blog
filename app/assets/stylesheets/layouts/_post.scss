@@ -47,6 +47,12 @@
   justify-content: center;
 }
 
+.post_content {
+  text-align: justify;
+  font-size:var(--font-size-m);
+  color: var(-color-text-body);
+}
+
 hr.full_line {
   border-top: 1px solid rgb(122, 121, 121);
 }

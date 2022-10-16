@@ -1,0 +1,27 @@
+.about_body {
+  padding-top: var(--space-m);
+  padding-left: var(--space-m);
+}
+.pic_about {
+  display: flex;
+  align-content: center;
+  margin-right: 5%;
+
+  .blog_pic {
+    float: right;
+  }
+
+  .about_top_text {
+    display: flex;
+    margin: auto;
+    font-size:var(--font-size-xl);
+    color: var(--color-dark);
+  }
+}
+.about_text {
+  text-indent: var(--space-m);
+  display: flex;
+  margin: auto;
+  font-size:var(--font-size-m);
+  color: var(--color-dark);
+}
