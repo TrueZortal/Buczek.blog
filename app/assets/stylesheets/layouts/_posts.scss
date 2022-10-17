@@ -4,6 +4,7 @@
   gap: 40px;
 
   .posts_table {
+    margin: auto;
     border-collapse: separate;
     border-spacing: var(--space-xxxs) var(--space-xxxs);
   }
@@ -89,4 +90,3 @@
       font-size:var(--font-size-m);
   }
 }
-
