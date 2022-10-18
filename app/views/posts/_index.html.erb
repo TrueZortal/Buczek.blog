@@ -2,10 +2,8 @@
     <%= link_to 'New Post', new_post_path, data: { turbo_frame: "main" }, class: "btn btn--admin" %>
 <% end %>
 <div class = "posts">
-  <table class = "posts_table">
-  <tr>
-    <td rowspan="2" colspan="2">
-      <% @posts.to_a.shift(1).each do |post|%>
+    <% @posts.to_a.shift(1).each do |post|%>
+      <div class = "highlight_card">
         <%= link_to post_path(post.id) do %>
           <div class = "highlight_thumbnail" style="background-image: url(<%= url_for(post.thumbnail.variant(:center)) %>)">
             <div class = "highlight_linkbox">
@@ -17,16 +15,12 @@
             <% end %>
           </div>
         <% end %>
-      <% end %>
-    </td>
+      </div>
+    <% end %>
     <% @posts.each_with_index do |post, index| %>
       <% next if index == 0 %>
-      <% if index == 3 || index > 3 && (index - 5) % 4 == 0 %>
-        <tr>
-          <td>
-      <% else %>
-          <td>
-      <% end %>
+
+      <div class = "card">
         <%= link_to post_path(post.id) do %>
           <div class = "thumbnail" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)" >
             <div class = "linkbox">
@@ -37,13 +31,7 @@
               <%= link_to "delete", post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
             <% end %>
           </div>
-        <% end %>
-      <% if index % 4 == 0 %>
-        </td>
-         </tr>
-      <% else %>
-        </td>
       <% end %>
+    </div>
     <% end %>
-  </table>
 </div>

@@ -1,27 +1,63 @@
 .about_body {
+  width:100%;
   padding-top: var(--space-m);
   padding-left: var(--space-m);
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
 }
-.pic_about {
+
+.profilepic {
   display: flex;
-  align-content: center;
-  margin-right: 5%;
+}
 
-  .blog_pic {
-    float: right;
+.blog_pic {
+  @media only screen and (min-width: 600px) {
+   margin-right: 5%;
+   height: 260px;
+   width: 220px;
   }
-
-  .about_top_text {
-    display: flex;
-    margin: auto;
-    font-size:var(--font-size-xl);
-    color: var(--color-dark);
+  @media screen and (max-width: 599px) {
+    height: 130px;
+    width: 110px;
   }
 }
+
+.about_top_text {
+  font-size:var(--font-size-xl);
+  color: var(--color-dark);
+}
+
 .about_text {
   text-indent: var(--space-m);
-  display: flex;
   margin: auto;
-  font-size:var(--font-size-m);
+  font-size:var(--font-size-l);
   color: var(--color-dark);
+}
+
+.magic_text {
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+  @media screen and (max-width: 599px) {
+    display: block;
+  }
+}
+
+.bigscreen {
+  @media only screen and (min-width: 600px) {
+    padding-top: var(--space-xxl);
+    display: block;
+  }
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
+}
+
+.smolscreen {
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+  @media screen and (max-width: 599px) {
+    display: block;
+  }
 }

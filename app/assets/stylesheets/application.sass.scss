@@ -7,13 +7,14 @@
 
 // Components
 @import "components/btn";
-// @import "components/thumbnail";
-// @import "components/error_message";
-// @import "components/form";
-// @import "components/visually_hidden";
-// @import "components/quote";
-// @import "components/turbo_progress_bar";
+@import "components/btn";
 
 // Layouts
-// @import "layouts/container";
-// @import "layouts/header";@import 'actiontext.css';
+@import "layouts/container";
+@import "layouts/about";
+@import "layouts/footer";
+@import "layouts/post";
+@import "layouts/posts";
+@import "layouts/projects";
+@import "layouts/topbar";
+@import "cookies_eu";

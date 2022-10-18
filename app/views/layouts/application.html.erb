@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <div data-turbo-permanent>
+      <%= render partial: "shared/topbar" %>
+    </div>
     <%= yield %>
     <% if notice %> <p class="alert alert-success"><%= notice %></p> <% end %>
     <% if alert %> <p class="alert alert-danger"><%= alert %></p> <% end %>

@@ -1,25 +1,20 @@
 <div class = "topbar">
   <div class = "banner">
     <h1 class = "bannertext">Buczek.blog</h1>
+    <div class = "verticalline"></div>
   </div>
-  <div class = "verticalline"></div>
-  <div class = "navbar">
-    <%= link_to "posts", root_path, data: { turbo_frame: "main" }, class: "btn btn--menu"%>
-    <%= link_to "about", about_path, data: { turbo_frame: "main" }, class: "btn btn--menu"%>
-    <%= link_to "projects", projects_path, data: { turbo_frame: "main" }, class: "btn btn--menu"%>
-  </div>
-  <div class = "login_corner">
-    <div class = "signin">
-      <% if user_signed_in? %>
-        <h6> <%=current_user.email%> </h6>
-      <% else %>
-        <%= link_to "log/sign in", new_user_session_path, data: { turbo_frame: "main" }, class: "login_link" %>
-      <% end %>
-    </div>
-    <div class = "logout">
-      <% if user_signed_in? %>
-        <%= link_to "logout", destroy_user_session_path, data: { turbo_frame: "main" }, class: "logout_link"%>
-      <% end %>
+  <div class = "navbar" id="myNavbar" data-controller="menu">
+    <%= link_to "posts", root_path, data: { turbo_frame: "main" }, class: "nav_link" %>
+    <%= link_to "about", about_path, data: { turbo_frame: "main" }, class: "nav_link" %>
+    <%= link_to "projects", projects_path, data: { turbo_frame: "main" }, class: "nav_link" %>
+
+    <% if user_signed_in? %>
+      <%= link_to "log out #{current_user.email}", destroy_user_session_path, class: "nav_link_log"%>
+    <% else %>
+      <%= link_to "log in", new_user_session_path, class: "nav_link_log" %>
+    <% end %>
+
+    <%= link_to(image_tag("https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/hamburger.png", size:"48x48", data: { "action" => "click->menu#myNavbar" }), "javascript:void(0);", class: "burger") %>
     </div>
   </div>
 </div>

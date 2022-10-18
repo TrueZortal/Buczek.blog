@@ -14,12 +14,18 @@
 
 .post_topper {
   display: block;
-  width: 50%;
-  min-width: 400px;
-  max-width: 800px;
+
   height: 100px;
   border: var(--border);
   border-radius: var(--border-radius);
+  @media only screen and (min-width: 600px) {
+    width: 50%;
+    min-width: 400px;
+    max-width: 800px;
+  }
+  @media screen and (max-width: 599px) {
+    width: 100%;
+  }
 }
 
 .post_highlightbox {
@@ -35,10 +41,15 @@
 .post_title {
   opacity: 1;
   padding-left: var(--space-s);
-  text-align: justify;
+  text-align: center;
   color: var(--color-dark);
   font-weight: bold;
-  font-size:var(--font-size-xxxl);
+  @media only screen and (min-width: 600px) {
+    font-size:var(--font-size-xxxl);
+  }
+  @media screen and (max-width: 599px) {
+    font-size:var(--font-size-l);
+  }
 }
 
 .gobackdiv {
