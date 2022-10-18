@@ -15,10 +15,13 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    if @comment.save
-      redirect_to post_path(comment_params[:post_id])
-    else
-      render :new, status: :unprocessable_entity
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to post_path(@comment.post_id), notice: "Comment added!"}
+        format.turbo_stream
+      else
+        render :new, status: :unprocessable_entity
+      end
     end
   end
 
@@ -41,10 +44,11 @@ class CommentsController < ApplicationController
   private
 
   def set_comment
+    p params
     @comment = Comment.find(params[:id])
   end
 
   def comment_params
-    params.permit(:id, :post_id, :user, :body)
+    params.permit(:id, :post_id, :user, :body, :_method)
   end
 end

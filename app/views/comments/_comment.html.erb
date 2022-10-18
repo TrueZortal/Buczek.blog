@@ -1,0 +1,12 @@
+<div class = <%="comment_#{comment.id}"%>>
+  <p class = "username"> <%= comment.user %> </p>
+  <p class = "timestamp"> <%= comment.created_at %> </p>
+  <p class = "body"> <%= comment.body %> </p>
+</div>
+<% if user_signed_in? && ( current_user.admin || current_user.email == comment.user )%>
+  <%= link_to "delete",
+  [comment.post, comment],
+  data: { turbo_method: :delete, turbo_confirm: "Deleting comment, confirm?" },
+  class: "btn btn--comment"%>
+<% end %>
+<div class = "partial_line"></div>

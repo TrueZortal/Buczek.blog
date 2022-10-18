@@ -19,22 +19,20 @@
   <br>
   <%= turbo_frame_tag "comments" do %>
   <% if user_signed_in? %>
-    <%= link_to "New comment", new_post_comment_path(post_id: @post.id) , class: "btn btn--comment" %>
+    <%= link_to "New comment",
+                new_post_comment_path(post_id: @post.id) ,
+                class: "btn btn--comment",
+                data: { turbo_frame: dom_id(Comment.new)} %>
   <% else %>
     <h4> login to comment! </h4>
   <% end%>
+  <%= turbo_frame_tag Comment.new %>
   <hr class = "full_line">
+  <div id = "comment_block">
     <% @comments.each do |comment| %>
-      <div class = "comment">
-        <p class = "username"> <%= comment.user %> </p>
-        <p class = "timestamp"> <%= comment.created_at %> </p>
-        <p class = "body"> <%= comment.body %> </p>
-      </div>
-      <% if user_signed_in? && ( current_user.admin || current_user.email == comment.user )%>
-        <%= link_to "delete", [comment.post, comment], data: { turbo_method: :delete, turbo_confirm: "Deleting comment, confirm?" }, class: "btn btn--comment"%>
-      <% end %>
-      <div class = "partial_line"></div>
+      <%= render partial: "comments/comment", locals: {comment: comment} %>
     <% end %>
+    </div>
   <% end %>
 </div>
 <% end %>

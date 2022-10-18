@@ -5,6 +5,7 @@ A personal blog project - initially weekend project, now in ongoing developement
 v1.0.2
   - Small fixes to display
   - Optimised mobile display
+  - Added turbo-streams to comments processing
 
 
 
