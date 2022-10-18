@@ -29,7 +29,8 @@
     min-width: 0;
     box-shadow: var(--space-xxxs) var(--space-xxxs);
     transition: 250ms;
-
+    background-repeat: no-repeat;
+    background-size:cover;
     @media only screen and (min-width: 600px) {
     opacity: 0.8;
 
@@ -85,7 +86,8 @@
       min-width: 0;
       box-shadow: var(--space-xxxxs) var(--space-xxxxs);
       transition: 250ms;
-
+      background-repeat: no-repeat;
+      background-size:cover;
       @media only screen and (min-width: 600px) {
       opacity: 0.8;
 

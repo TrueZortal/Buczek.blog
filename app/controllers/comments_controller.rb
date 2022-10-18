@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: %i[show edit update destroy]
 
   def show; end
 
@@ -42,8 +44,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
-
   def comment_params
-      params.permit(:id, :post_id, :user, :body)
+    params.permit(:id, :post_id, :user, :body)
   end
 end

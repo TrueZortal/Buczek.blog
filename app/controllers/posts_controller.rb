@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: %i[show edit update destroy]
   def index
     @posts = Post.ordered
 
-    render partial: "posts/index"
+    render partial: 'posts/index'
   end
 
   def show
@@ -23,8 +25,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @post.update(post_params)
@@ -39,6 +40,7 @@ class PostsController < ApplicationController
 
     redirect_to root_path
   end
+
   private
 
   def set_post
