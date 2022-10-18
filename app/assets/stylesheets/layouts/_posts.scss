@@ -61,17 +61,19 @@
 
   .highlight_linktext {
     opacity: 1;
-    padding-left: var(--space-l);
-    text-align: justify;
     color: var(--color-dark);
     font-weight: bold;
-  @media only screen and (min-width: 600px) {
-    transition: 500ms;
-    font-size:var(--font-size-xxl);
+    width: 100%;
+    @media only screen and (min-width: 600px) {
+      transition: 500ms;
+      font-size:var(--font-size-xxl);
+      padding-left: var(--space-l);
+    text-align: justify;
   }
   @media screen and (max-width: 599px) {
     transition: 200ms;
     font-size:var(--font-size-m);
+    text-align: center;
   }
   }
 
@@ -114,10 +116,18 @@
 
   .linktext {
       opacity: 1;
-      padding-left: var(--space-s);
-      text-align: justify;
       color: var(--color-dark);
-      font-weight: bold;
       font-size:var(--font-size-m);
+      font-weight: bold;
+      width: 100%;
+      @media only screen and (min-width: 600px) {
+        padding-left: var(--space-s);
+        transition: 500ms;
+        text-align: justify;
+      }
+      @media screen and (max-width: 599px) {
+        transition: 200ms;
+        text-align: center;
+      }
   }
 }
