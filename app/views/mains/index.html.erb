@@ -1,4 +1,8 @@
 <div class="container">
+  <div data-turbo-permanent>
+      <%= render partial: "shared/sidebar" %>
+    </div>
+  <div class = "seaoffog"></div>
   <div class = "main_display">
     <%= turbo_frame_tag "main" do %>
       <%= render partial: "posts/index" %>

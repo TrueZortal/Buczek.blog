@@ -15,7 +15,7 @@ export default class extends Controller {
     if (menu.className === "menu") {
       menu.className += "-rolledout"
     } else {
-      menu.className = "menu"
+      // menu.className = "menu"
     }
     console.log("boom")
   }
@@ -23,7 +23,7 @@ export default class extends Controller {
   rollup() {
     var menu = document.getElementsByClassName("menu-rolledout")[0]
     if (menu.className === "menu-rolledout") {
-      menu.className = "menu"
+      // menu.className = "menu"
     } else {
       menu.className += "-rolledout"
     }

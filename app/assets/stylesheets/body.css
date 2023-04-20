@@ -1,4 +1,39 @@
+* {
+  box-sizing:border-box;
+  overflow: hidden;
+}
+
 body {
   margin:0px;
   background-color: #EFF0F2;
+}
+
+.seaoffog {
+  background-image: url('seaoffog_v2.jpeg');
+  z-index: -999;
+  position: absolute;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  margin:0px;
+  height: 100%;
+  width: 100%;
+  opacity: 50%;
+  animation: fadeIn 10s;
+  -webkit-animation: fadeIn 10s;
+  -moz-animation: fadeIn 10s;
+  -o-animation: fadeIn 10s;
+  -ms-animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 100%;}
+  100% { opacity: 50%;}
+}
+
+.footer {
+  position:fixed;
+  bottom:0;
+  right:0;
+  display: flex;
+  align-items: center;
 }
