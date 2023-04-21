@@ -1,32 +1,27 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  myNavbar() {
-    var x = document.getElementsByClassName("myNavbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbar";
+  connect() {
+    var boxes = document.getElementsByClassName('link_box')
+    setTimeout(() => {
+      for (let box of boxes) {
+        box.className += '_inplace';
+      }
+    }, 3000)
+  }
+
+  removeAnimation(e) {
+    if (e.currentTarget.className != 'link_box_inplace') {
+      e.currentTarget.className += '_inplace';
+      e.currentTarget.dataset.action = 'mouseover->menu#freezeFrame'
     }
   }
 
-  rollout(e) {
-    var menu = document.getElementsByClassName("menu")[0]
-    if (menu.className === "menu") {
-      menu.className += "-rolledout"
-    } else {
-      // menu.className = "menu"
-    }
-    console.log("boom")
-  }
+  freezeFrame(e) {
+    console.log(e.currentTarget)
+    var box = e.currentTarget
+    var box_pox = box.getBoundingClientRect()
+    console.log(box_pox)
 
-  rollup() {
-    var menu = document.getElementsByClassName("menu-rolledout")[0]
-    if (menu.className === "menu-rolledout") {
-      // menu.className = "menu"
-    } else {
-      menu.className += "-rolledout"
-    }
-    console.log("winding")
   }
 }

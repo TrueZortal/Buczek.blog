@@ -1,10 +1,16 @@
 <div class = "footer">
+<div class = "socials">
   <%= link_to image_tag("github_logo.png", size: "30x29"), "https://github.com/TrueZortal", target: :_blank %>
   <%= link_to image_tag("linkedin_logo.png", size: "30x29"), "https://www.linkedin.com/in/buczekm/", target: :_blank %>
   <%= mail_to "mtsbck@gmail.com", image_tag("mail_icon.png", size: "30x29")%>
-    <% if user_signed_in? %>
-      <%= link_to "log out #{current_user.email}", destroy_user_session_path, class: "nav_link_log"%>
-    <% else %>
-      <%= link_to "log in", new_user_session_path, class: "nav_link nav_link_log" %>
-    <% end %>
+</div>
+<div class = "signature">
+  <p>Mateusz Buczek 2023</p>
+</div>
+
+    <%# <% if user_signed_in? %>
+      <%# <%= link_to "log out #{current_user.email}", destroy_user_session_path, class: "nav_link_log"%>
+    <%# <% else %>
+      <%# <%= link_to "log in", new_user_session_path, class: "nav_link nav_link_log" %>
+    <%# <% end %>
 </div>

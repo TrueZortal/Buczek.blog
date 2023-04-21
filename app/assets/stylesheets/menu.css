@@ -1,6 +1,8 @@
 * {
-  box-sizing:border-box
+  box-sizing:border-box;
+  animation-fill-mode: forwards
 }
+
 
 .name_sign {
   position: absolute;
@@ -36,14 +38,13 @@
 
 .menu {
   position: absolute;
-  height: 65vh;
+  height: 73vh;
   width: 100vw;
   opacity: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  z-index: 4;
 }
 
 .link_box {
@@ -52,10 +53,36 @@
   width: 25vw;
   height: 20vh;
   opacity: 100%;
-  border: 2px solid #868189;
-  border-radius: 5%;
+  -webkit-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+  -moz-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+  box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+  border-radius: 2%;
   margin-top: 20vh;
+  box-shadow: 2vw black;
   animation: fadeInUp 2s;
+}
+
+.link_box_inplace {
+  margin:1vh;
+  min-width: 300px;
+  width: 25vw;
+  height: 20vh;
+  opacity: 100%;
+  -webkit-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+  -moz-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+  box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+  border-radius: 2%;
+  margin-top: 20vh;
+  box-shadow: 2vw black;
+  animation: floatBack 1s;
+}
+
+.link_box_inplace:hover {
+  animation: floatCloud 25s ease-in-out alternate infinite;
+}
+
+@keyframes floatBack {
+  100% { transform: translate(0px, 0px)};
 }
 
 @keyframes fadeInUp {
@@ -67,15 +94,49 @@
   100% { transform: translateY(0px); }
 }
 
+@keyframes floatCloud {
+  0% { transform: translate(0px, 0px) }
+  10% { transform: translate(-2px, 3px); }
+  20% { transform: translate(3px, 5px); }
+  30% {
+    transform: translate(1px, -1px);
+    /* background-color: #91e8ad17; */
+  }
+  40% { transform: translate(5px, -7px); }
+  50% {
+    transform: translate(3px, -2px);
+    /* background-color: #91e8ad00; */
+  }
+  60% { transform: translate(-6px, 2px); }
+  70% {
+    transform: translate(3px, -1px);
+    /* background-color: #91e8ad18; */
+  }
+  80% { transform: translate(-4px, 3px); }
+  90% { transform: translate(2px, -2px); }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
 @media only screen and (min-width: 600px){
   .link_box {
     height: 50vh;
     margin: 2vw;
-    margin-top: 15vh;
+    margin-top: 20vh;
+    margin-bottom: 2vh;
+  }
+
+  .link_box_inplace {
+    height: 50vh;
+    margin: 2vw;
+    margin-top: 20vh;
+    margin-bottom: 2vh;
   }
 
   .menu {
-    margin-bottom: 30vh;
+    border:0;
+    margin-bottom: 25vh;
     flex-direction: row;
     align-content: normal;
   }
@@ -90,3 +151,4 @@
 .nav_link_log {
   margin-right: 1vw;
 }
+
