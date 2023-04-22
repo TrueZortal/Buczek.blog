@@ -55,33 +55,34 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  animation: floatUp 2s;
+  animation: floatBackDown 2s;
 }
 
 .menu_static {
   position: absolute;
   left:0;
   top:0;
+  background-color: blueviolet;
   width:100vw;
   height: 5vh;
   opacity: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: none;
   justify-content: center;
   animation: floatDown 2s;
 }
 
 .link_box {
+  display: block;
   margin:1vh;
   min-width: 300px;
-  width: 25vw;
-  height: 20vh;
+  width: 25%;
+  height: 33%;
   opacity: 100%;
   -webkit-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   -moz-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   border-radius: 2%;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
   box-shadow: 2vw black;
   animation: fadeInUp 2s;
 }
@@ -89,14 +90,14 @@
 .link_box_inplace {
   margin:1vh;
   min-width: 300px;
-  width: 25vw;
-  height: 20vh;
+  width: 25%;
+  height: 33%;
   opacity: 100%;
   -webkit-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   -moz-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   border-radius: 2%;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
   box-shadow: 2vw black;
 }
 
@@ -106,21 +107,22 @@
 
 @keyframes floatDown {
   0% {
-    transform: translateY(100px);
+    transform: translateY(-100px);
     opacity: 0%
   }
   100% {
     transform: translateY(0px);
     opacity: 100%
-    }
+  }
 }
 
-@keyframes floatUp {
-  0% { transform: translateY(0px) }
+@keyframes floatBackDown {
+  0% { transform: translateY(0px); }
+  20% { transform: translateY(-15px); }
   100% {
-    transform: translateY(-600px);
+    transform: translateY(500px);
     opacity: 0%;
-    }
+  }
 }
 
 @keyframes fadeInUp {
@@ -156,14 +158,14 @@
 
 @media only screen and (min-width: 600px){
   .link_box {
-    height: 50vh;
+    height: 66%;
     margin: 2vw;
     margin-top: 20vh;
     margin-bottom: 2vh;
   }
 
   .link_box_inplace {
-    height: 50vh;
+    height: 66%;
     margin: 2vw;
     margin-top: 20vh;
     margin-bottom: 2vh;
@@ -175,9 +177,14 @@
     flex-direction: row;
     align-content: normal;
   }
+
+  .menu_static {
+   height: 10vh;
+  }
 }
 
 .inner_container {
+  display: block;
   position: absolute;
   height: 100%;
   width: 100%;
