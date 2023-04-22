@@ -12,11 +12,11 @@ body {
   position: absolute;
   margin: 5% 2% 5% 2%;
   width: 95vw;
-  height: 80vh;
+  height: 90vh;
   overflow-x: wrap;
   overflow-y: auto;
   z-index: -5;
-  /* background-color: #41414d60; */
+  animation: appear 2s;
 }
 
 .banner {
@@ -26,7 +26,7 @@ body {
   text-align: center;
   color: #41414D;
   font-family: fantasy;
-  font-size: 10vh;
+  font-size: 8vh;
   animation: appearBanner 5s;
 }
 
@@ -36,9 +36,27 @@ body {
   width: 100vw;
   text-align: center;
   color: #41414D;
+  font-size: 8vh;
   font-family: fantasy;
-  font-size: 10vh;
-  animation: floatUp 2s;
+  animation: floatUp 3s;
+}
+
+@media only screen and (min-width: 1050px){
+  .banner {
+    font-size: 10vh;
+  }
+
+  .banner_floatingoff {
+    font-size: 10vh;
+  }
+
+  .main_display {
+    height: 80vh;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
 }
 
 @keyframes floatUp {
@@ -50,21 +68,17 @@ body {
 }
 
 .about_body {
-  display: block;
-  margin: inherit;
-  width: 100%;
-  height: 80vh;
   z-index: 5;
-  animation: appear 2s;
+  background-color: #eff0f235;
+  border-radius: 2%;
+  animation: appear 3s;
 }
 
 .project_body {
-  display: block;
-  margin: inherit;
-  width: 100%;
-  height: 80vh;
   z-index: 5;
-  animation: appear 2s;
+  background-color: #eff0f235;
+  border-radius: 2%;
+  animation: appear 3s;
 }
 
 .seaoffog {
@@ -72,7 +86,7 @@ body {
   z-index: -999;
   position: absolute;
   background-size: cover;
-  /* background-repeat: no-repeat; */
+  background-position: 50% 50%;
   margin:0px;
   height: 100%;
   width: 100%;
@@ -91,7 +105,6 @@ body {
   width: 100vw;
   margin:0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   animation: appear 5s;
