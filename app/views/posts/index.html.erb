@@ -1,0 +1,23 @@
+<%= turbo_frame_tag "main" do %>
+  <% if user_signed_in? && current_user.admin %>
+      <%= link_to 'New Post', new_post_path, data: { turbo_frame: "main" }, class: "btn btn--admin" %>
+  <% end %>
+  <div class = "post_carousel">
+    <% @posts.each do |post| %>
+      <div class = "post_box">
+
+        <%# TODO: change url_for in prod %>
+        <%# style = background-image: url(<%= url_for(post.thumbnail.variant(:thumb))%>
+        <div class = "post_art" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)">
+          <div class = "post_title_box">
+            <p class = "post_title">
+              <%= post.title %>
+            </p>
+          </div>
+          <%# TODO: Add post time %>
+          <p class = "date_time"> <%= post.updated_at %> </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,38 +1,38 @@
 <%= turbo_frame_tag "main" do %>
-<div class = "post_body">
-  <div class = "post_title_box">
-    <div class = "post_topper" style="background-image: url(<%= url_for(@post.thumbnail.variant(:center)) %>)" >
-      <div class = "post_highlightbox">
-        <h1 class = "post_title"><%= @post.title %></h1>
+  <div class = "post_body">
+    <div class = "post_title_box">
+      <div class = "post_topper" style="background-image: url(<%= url_for(@post.thumbnail.variant(:center)) %>)" >
+        <div class = "post_highlightbox">
+          <h1 class = "post_title"><%= @post.title %></h1>
+        </div>
       </div>
     </div>
-  </div>
-  <div class = "gobackdiv">
-      <%= link_to "go back", root_path, class: "btn btn--goback"%>
-    </div>
-  <hr class = "full_line">
-  <p class = "post_content"><%= @post.content %></p>
-  <% if user_signed_in? && current_user.admin %>
-    <%= link_to "edit", edit_post_path, class: "btn btn--admin"%>
-    <%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
-  <% end %>
-  <br>
-  <%= turbo_frame_tag "comments" do %>
-  <% if user_signed_in? %>
-    <%= link_to "New comment",
-                new_post_comment_path(post_id: @post.id) ,
-                class: "btn btn--comment",
-                data: { turbo_frame: dom_id(Comment.new)} %>
-  <% else %>
-    <h4> login to comment! </h4>
-  <% end%>
-  <%= turbo_frame_tag Comment.new %>
-  <hr class = "full_line">
-  <div id = "comment_block">
-    <% @comments.each do |comment| %>
-      <%= render partial: "comments/comment", locals: {comment: comment} %>
+    <div class = "gobackdiv">
+        <%= link_to "go back", posts_path, class: "btn btn--goback"%>
+      </div>
+    <hr class = "full_line">
+    <p class = "post_content"><%= @post.content %></p>
+    <% if user_signed_in? && current_user.admin %>
+      <%= link_to "edit", edit_post_path, class: "btn btn--admin"%>
+      <%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
     <% end %>
-    </div>
-  <% end %>
-</div>
+    <br>
+    <%= turbo_frame_tag "comments" do %>
+    <% if user_signed_in? %>
+      <%= link_to "New comment",
+                  new_post_comment_path(post_id: @post.id) ,
+                  class: "btn btn--comment",
+                  data: { turbo_frame: dom_id(Comment.new)} %>
+    <% else %>
+      <h4> login to comment! </h4>
+    <% end%>
+    <%= turbo_frame_tag Comment.new %>
+    <hr class = "full_line">
+    <div id = "comment_block">
+      <% @comments.each do |comment| %>
+        <%= render partial: "comments/comment", locals: {comment: comment} %>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
 <% end %>

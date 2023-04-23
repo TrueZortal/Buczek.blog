@@ -107,6 +107,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* gap: 1%; */
   animation: appear 5s;
   -webkit-animation: appear 5s;
   -moz-animation: appear 5s;
@@ -115,6 +116,8 @@ body {
 }
 
 .signature {
+  display: flex;
+  gap: 10px;
   font-family: fantasy;
   font-size: 1vh;
 }

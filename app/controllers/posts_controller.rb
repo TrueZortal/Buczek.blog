@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.ordered
 
-    render partial: 'posts/index'
   end
 
   def show
