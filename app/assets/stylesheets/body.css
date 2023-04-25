@@ -1,6 +1,7 @@
 * {
   box-sizing:border-box;
-  /* overflow: hidden; */
+  animation-fill-mode: forwards
+
 }
 
 body {
@@ -25,6 +26,7 @@ body {
   width: 100vw;
   text-align: center;
   color: #41414D;
+  opacity: 70%;
   font-family: fantasy;
   font-size: 8vh;
   animation: appearBanner 5s;
@@ -36,6 +38,7 @@ body {
   width: 100vw;
   text-align: center;
   color: #41414D;
+  opacity: 70%;
   font-size: 8vh;
   font-family: fantasy;
   animation: floatUp 3s;
@@ -134,6 +137,6 @@ body {
 
 @keyframes appearBanner {
   0% { opacity: 0%; }
-  50% { opacity: 100%; }
+  40% { opacity: 100%; }
   100% { opacity: 70%; }
 }

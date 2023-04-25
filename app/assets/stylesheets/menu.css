@@ -39,7 +39,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  animation: floatDown 2s;
+  animation: floatDown 1s;
 }
 
 .link_box {
