@@ -135,9 +135,18 @@
   height: 100%;
   width: 30%;
   background: rgb(236,132,57);
-  background: linear-gradient(0deg, rgba(236, 132, 57, 0.814) 0%, rgba(137,133,157,0.444437149859944) 100%);
+  background: linear-gradient(0deg, rgba(236, 132, 57, 0.276) 0%, rgba(137, 133, 157, 0.167) 100%);
   border-radius: 5%;
   text-align: center;
+  -webkit-box-shadow: 2px 2px 15px 0px rgba(47, 55, 47, 1);
+  -moz-box-shadow: 2px 2px 15px 0px rgba(47, 55, 47, 1);
+  box-shadow: 2px 2px 15px 0px rgba(47, 55, 47, 1);
+}
+
+.top_selection:hover {
+  -webkit-box-shadow: 8px 8px 27px -1px rgba(47, 55, 47, 1);
+  -moz-box-shadow: 8px 8px 27px -1px rgba(47, 55, 47, 1);
+  box-shadow: 8px 8px 27px -1px rgba(47, 55, 47, 1);
 }
 
 @media only screen and (min-width: 1050px){
