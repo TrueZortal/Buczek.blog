@@ -34,11 +34,16 @@
 
 .post_title {
   position: relative;
+  text-decoration: none;
   padding-top: 10px;
   font-family: fantasy;
   font-size: 3vh;
   text-align: center;
   color: #A18D8B;
+}
+
+a{
+  text-decoration: none;
 }
 
 .post_art {
@@ -71,6 +76,12 @@
   -moz-box-shadow: 8px 8px 27px -5px rgba(47, 55, 47, 1);
   box-shadow: 8px 8px 27px -5px rgba(47, 55, 47, 1);
   border-radius: 5%;
+  animation: appear 3s;
+  -webkit-animation: appear 3s;
+  -moz-animation: appear 3s;
+  -o-animation: appear 3s;
+  -ms-animation: appear 3s;
+  text-decoration: none;
   /* border-radius: 5% 2% 25% 90% / 2% 2% 100% 16% ; */
 }
 
@@ -87,4 +98,9 @@
   .post_carousel {
     flex-direction: row;
   }
+}
+
+@keyframes appear {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
 }

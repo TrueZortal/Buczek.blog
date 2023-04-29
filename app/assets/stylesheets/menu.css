@@ -132,8 +132,12 @@
 }
 
 .top_selection {
-  height: 90%;
+  height: 100%;
   width: 30%;
+  background: rgb(236,132,57);
+  background: linear-gradient(0deg, rgba(236, 132, 57, 0.814) 0%, rgba(137,133,157,0.444437149859944) 100%);
+  border-radius: 5%;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1050px){
@@ -183,13 +187,22 @@
   }
 }
 
+.inner_container_top {
+  font-family: fantasy;
+  font-size: 3vh;
+  color: #41414D;
+  position: relative;
+  top: -2vh;
+  width: 100%;
+  height: 100%;
+}
+
 .inner_container {
   position: relative;
   top: -2vh;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
-
 
 .nav_link {
   font-family: fantasy;

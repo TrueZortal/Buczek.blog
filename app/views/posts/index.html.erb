@@ -5,7 +5,7 @@
   <div class = "post_carousel">
     <% @posts.each do |post| %>
       <div class = "post_box">
-
+        <%= link_to post_path(post.id) do %>
         <%# TODO: change url_for in prod %>
         <%# style = background-image: url(<%= url_for(post.thumbnail.variant(:thumb))%>
         <div class = "post_art" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)">
@@ -17,6 +17,7 @@
           <%# TODO: Add post time %>
           <p class = "date_time"> <%= post.updated_at %> </p>
         </div>
+        <% end %>
       </div>
     <% end %>
   </div>
