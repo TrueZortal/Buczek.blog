@@ -1,13 +1,21 @@
+.posts_navigation {
+ display: flex;
+ justify-content: center;
+ overflow-x: auto;
+ margin-top: 10%;
+ margin-bottom: 15%;
+}
+
 .post_carousel {
   position: absolute;
   height: 73vh;
-  width: 100vw;
+  width: 90vw;
   opacity: 100%;
   display: flex;
   flex-direction: column;
   border:0;
   margin-top: 0;
-  margin-bottom: 25vh;
+  /* margin-bottom: 25vh; */
 }
 
 .post_title_box {
@@ -18,8 +26,13 @@
   z-index: 1;
 }
 
+.archive_link_container {
+  position: fixed;
+  margin: auto;
+  top: 7%;
+}
+
 .post_title_box::after {
-  /* display: none; */
   overflow: hidden;
   content: "";
   position:absolute;
@@ -68,11 +81,10 @@ a{
 .post_box {
   display: block;
   min-width: 400px;
-  min-height: 250px;
+  min-height: 200px;
   height: 66%;
-  width: 25%;
+  width: 100%;
   margin: 2vw;
-  margin-bottom: 5vh;
   background: rgb(236,132,57);
   background: linear-gradient(0deg, rgba(236,132,57,0.2679665616246498) 0%, rgba(137,133,157,0.444437149859944) 100%);
   -webkit-box-shadow: 8px 8px 27px -5px rgba(47, 55, 47, 1);
@@ -92,15 +104,24 @@ a{
   box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
 }
 
-.archive_link_container {
-  position: absolute;
-  z-index: 5;
-}
-
 @media only screen and (min-width: 1050px){
+  .posts_navigation {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+   }
+
+  .archive_link_container {
+    position: fixed;
+    margin: auto;
+    top:85%;
+  }
+
   .post_box {
     margin-top: 10vh;
-
+    margin-bottom: 5vh;
   }
 
   .post_title_box::after {
@@ -109,6 +130,7 @@ a{
 
   .post_carousel {
     flex-direction: row;
+    gap: 0;
   }
 }
 
