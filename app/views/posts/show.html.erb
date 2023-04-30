@@ -1,7 +1,6 @@
 <%= turbo_frame_tag "main" do %>
   <div class = "post_body">
     <div class = "individual_post_title">
-      <div class = "post_topper" style="background-image: url(<%= url_for(@post.thumbnail.variant(:center)) %>)" >
         <div class = "post_highlightbox">
           <h1 class = "post_title"><%= @post.title %></h1>
         </div>

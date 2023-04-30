@@ -42,6 +42,10 @@
   color: #A18D8B;
 }
 
+.post_highlightbox {
+  background-color: #41414da4;
+}
+
 a{
   text-decoration: none;
 }
@@ -59,7 +63,6 @@ a{
   position:absolute;
   bottom: 0;
   right: 10px;
-
 }
 
 .post_box {
@@ -87,6 +90,11 @@ a{
   -webkit-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   -moz-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+}
+
+.archive_link_container {
+  position: absolute;
+  z-index: 5;
 }
 
 @media only screen and (min-width: 1050px){

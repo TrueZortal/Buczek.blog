@@ -21,4 +21,7 @@
       </div>
     <% end %>
   </div>
+  <div class = "archive_link_container">
+    <%= link_to 'View the full posts archive..', archive_path, data: { turbo_frame: "main" }, class: "archive_link" %>
+  </div>
 <% end %>

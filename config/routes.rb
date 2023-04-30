@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
   get '/about', to: 'about#about'
   get '/projects', to: 'projects#index'
+  get '/archive', to: 'posts#archive'
 end

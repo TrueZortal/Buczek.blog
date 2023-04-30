@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "main" do %>
+  <% @posts.each do |post| %>
+    <p><%= post.title %> - <%= post.updated_at %></p>
+    <p><%= "#{post.content.to_plain_text.slice(0..140)}..." %></p><%= link_to 'read more', post_path(post.id), class: "read_more_link" %>
+  <% end %>
+<% end %>
