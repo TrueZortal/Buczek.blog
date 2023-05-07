@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: BuczekBlog_developement
   pool: 5
-  username: mateusz
+  username: postgres
   password: ENV['BLOGPW']
   timeout: 5000
 
@@ -49,6 +49,6 @@ test:
   encoding: unicode
   database: BuczekBlog
   pool: 5
-  username: mateusz
+  username: postgres
   password: ENV['BLOGPW']
   timeout: 5000
