@@ -15,7 +15,6 @@
   flex-direction: column;
   border:0;
   margin-top: 0;
-  /* margin-bottom: 25vh; */
 }
 
 .post_title_box {
@@ -26,10 +25,19 @@
   z-index: 1;
 }
 
+.archive_link {
+  font-family: fantasy;
+  color:#41414D;
+}
+
+.archive_link:hover {
+  font-weight: bold;
+}
+
 .archive_link_container {
   position: fixed;
   margin: auto;
-  top: 7%;
+  top: 8%;
 }
 
 .post_title_box::after {
@@ -113,10 +121,17 @@ a{
     margin-top: 0;
    }
 
+   .archive_link {
+    font-family: fantasy;
+    font-size: 4vh;
+    color:#41414D;
+  }
+
   .archive_link_container {
     position: fixed;
     margin: auto;
-    top:85%;
+    top:70%;
+    right: 5%;
   }
 
   .post_box {

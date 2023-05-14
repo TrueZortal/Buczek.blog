@@ -10,10 +10,11 @@ body {
 
 .main_display {
   position: absolute;
-  margin: 10% 2% 5% 2%;
+  margin: 1% 2% 5% 2%;
   width: 95vw;
-  height: 90vh;
-  overflow-x: wrap;
+  height: 85vh;
+  top: 10%;
+  overflow-x: hidden;
   overflow-y: auto;
   z-index: -5;
   animation: appear 2s;
@@ -53,6 +54,7 @@ body {
   }
 
   .main_display {
+    top: 0%;
     height: 80vh;
     margin: 5% 2% 5% 2%;
   }
