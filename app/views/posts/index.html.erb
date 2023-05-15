@@ -3,20 +3,18 @@
       <%= link_to 'New Post', new_post_path, data: { turbo_frame: "main" }, class: "btn btn--admin" %>
   <% end %>
   <div class = "posts_navigation">
+    <div class = "navigation_button" id = "posts_forward"></div>
     <div class = "post_carousel" id = "posts_car">
       <% @posts.each do |post| %>
         <div class = "post_box">
           <%= link_to post_path(post.id) do %>
-          <%# TODO: change url_for in prod %>
-          <%# style = background-image: url(<%= url_for(post.thumbnail.variant(:thumb))%>
           <div class = "post_art" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)">
             <div class = "post_title_box">
               <p class = "post_title">
                 <%= post.title %>
               </p>
             </div>
-            <%# TODO: Add post time %>
-            <p class = "date_time"> <%= post.updated_at %> </p>
+            <p class = "date_time"> <%= post.updated_at.to_formatted_s(:long) %> </p>
           </div>
           <% end %>
         </div>

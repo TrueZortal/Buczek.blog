@@ -1,13 +1,17 @@
 .posts_navigation {
- display: flex;
- justify-content: center;
- overflow-x: auto;
- margin-top: 10%;
- margin-bottom: 15%;
+padding: 1%;
+top:5%;
+position: relative;
+display: flex;
+justify-content: center;
+margin-top: 10%;
+margin-bottom: 15%;
+animation: appear 3s;
 }
 
 .post_carousel {
-  position: absolute;
+  padding: 3%;
+  position: relative;
   height: 73vh;
   width: 90vw;
   opacity: 100%;
@@ -15,6 +19,7 @@
   flex-direction: column;
   border:0;
   margin-top: 0;
+  overflow-x: hidden;
 }
 
 .post_title_box {
@@ -23,21 +28,6 @@
   margin-top: 3%;
   background:#41414D;
   z-index: 1;
-}
-
-.archive_link {
-  font-family: fantasy;
-  color:#41414D;
-}
-
-.archive_link:hover {
-  font-weight: bold;
-}
-
-.archive_link_container {
-  position: fixed;
-  margin: auto;
-  top: 8%;
 }
 
 .post_title_box::after {
@@ -58,7 +48,7 @@
   text-decoration: none;
   padding-top: 10px;
   font-family: fantasy;
-  font-size: 3vh;
+  font-size: 2vh;
   text-align: center;
   color: #A18D8B;
 }
@@ -80,10 +70,28 @@ a{
   background-position: 50% 50%;
 }
 
+.archive_link {
+  font-family: fantasy;
+  color:#41414D;
+  animation: appear 3s;
+}
+
+.archive_link:hover {
+  font-weight: bold;
+}
+
+.archive_link_container {
+  position: fixed;
+  margin: auto;
+  top: 8%;
+}
+
 .date_time {
   position:absolute;
   bottom: 0;
   right: 10px;
+  font-family: fantasy;
+  color:#41414D;
 }
 
 .post_box {
@@ -121,6 +129,16 @@ a{
     margin-top: 0;
    }
 
+   .navigation_button {
+    z-index: 0;
+    height: 5vw;
+    aspect-ratio: 1;
+    background-color: red;
+    position: absolute;
+    right:0;
+    top:35%;
+  }
+
    .archive_link {
     font-family: fantasy;
     font-size: 4vh;
@@ -130,12 +148,11 @@ a{
   .archive_link_container {
     position: fixed;
     margin: auto;
-    top:70%;
+    top:75%;
     right: 5%;
   }
 
   .post_box {
-    margin-top: 10vh;
     margin-bottom: 5vh;
   }
 
@@ -144,8 +161,14 @@ a{
   }
 
   .post_carousel {
+    top:0;
+    padding-top: 5vh;
     flex-direction: row;
     gap: 0;
+  }
+
+  .post_title {
+    font-size: 3vh;
   }
 }
 

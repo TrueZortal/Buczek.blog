@@ -1,0 +1,30 @@
+.individual_post_highlightbox {
+  background-color: #41414d;
+  border-radius: 5%;
+}
+
+.individual_post_title {
+    position: relative;
+    text-decoration: none;
+    padding-top: 10px;
+    font-family: fantasy;
+    font-size: 2vh;
+    text-align: center;
+    color: #A18D8B;
+}
+
+.post_body {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: normal;
+  padding:3%;
+  animation: appear 2s;
+  overflow: auto;
+}
+
+@keyframes appear {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}

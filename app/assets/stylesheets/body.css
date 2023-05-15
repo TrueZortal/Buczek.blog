@@ -4,18 +4,18 @@
 }
 
 body {
+  overflow: hidden;
   margin:0px;
   background-color: #EFF0F2;
 }
 
 .main_display {
   position: absolute;
+  top:5%;
   margin: 1% 2% 5% 2%;
   width: 95vw;
   height: 85vh;
-  top: 10%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   z-index: -5;
   animation: appear 2s;
 }
@@ -54,7 +54,6 @@ body {
   }
 
   .main_display {
-    top: 0%;
     height: 80vh;
     margin: 5% 2% 5% 2%;
   }
@@ -73,6 +72,11 @@ body {
 }
 
 .about_body {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: normal;
+  padding: 3%;
   z-index: 5;
   background-color: #eff0f235;
   border-radius: 2%;
@@ -80,6 +84,11 @@ body {
 }
 
 .project_body {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: normal;
+  padding: 3%;
   z-index: 5;
   background-color: #eff0f235;
   border-radius: 2%;

@@ -1,11 +1,10 @@
 <%= turbo_frame_tag "main" do %>
   <div class = "post_body">
-    <div class = "individual_post_title">
-        <div class = "post_highlightbox">
-          <h1 class = "post_title"><%= @post.title %></h1>
+    <div class = "individual_post_title_wrapper">
+        <div class = "individual_post_highlightbox">
+          <h1 class = "individual_post_title"><%= @post.title %></h1>
         </div>
       </div>
-    </div>
     <div class = "gobackdiv">
         <%= link_to "go back", posts_path, class: "btn btn--goback"%>
       </div>
@@ -33,5 +32,6 @@
       <% end %>
       </div>
     <% end %>
+  </div>
   </div>
 <% end %>

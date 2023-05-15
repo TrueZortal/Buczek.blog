@@ -1,0 +1,42 @@
+.archive_list {
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: appear 3s;
+}
+
+.archive_post {
+  width: 80%;
+  position: relative;
+}
+
+.archive_title {
+  font-family: fantasy;
+  color: #41414D;
+  font-weight: bold;
+}
+
+.archive_short {
+  font-family: fantasy;
+  color: #41414D;
+}
+
+.read_more_link {
+  font-family: fantasy;
+  text-decoration: none;
+  position: absolute;
+  right:0;
+  bottom: 5px;
+  color: #41414D;
+}
+
+.read_more_link:hover {
+  font-weight: bolder;
+}
+
+@keyframes appear {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
