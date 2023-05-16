@@ -1,25 +1,29 @@
 .posts_navigation {
-padding: 1%;
-top:5%;
-position: relative;
-display: flex;
-justify-content: center;
-margin-top: 10%;
-margin-bottom: 15%;
-animation: appear 3s;
+  padding: 1%;
+  top:5%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  animation: appear 3s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.posts_navigation::-webkit-scrollbar {
+  display: none;
 }
 
 .post_carousel {
   padding: 3%;
   position: relative;
-  height: 73vh;
-  width: 90vw;
+  height: 85vh;
+  width: 95vw;
   opacity: 100%;
   display: flex;
   flex-direction: column;
   border:0;
   margin-top: 0;
-  overflow-x: hidden;
 }
 
 .post_title_box {
@@ -123,23 +127,31 @@ a{
 @media only screen and (min-width: 1050px){
   .posts_navigation {
     display: flex;
-    justify-content: center;
     overflow-x: auto;
-    margin-bottom: 0;
-    margin-top: 0;
-   }
-
-   .navigation_button {
-    z-index: 0;
-    height: 5vw;
-    aspect-ratio: 1;
-    background-color: red;
-    position: absolute;
-    right:0;
-    top:35%;
+    top:0;
   }
 
-   .archive_link {
+  .navigation_button {
+    z-index: 5;
+    height: 5vw;
+    aspect-ratio: 1;
+
+  }
+
+  .left {
+    background-color: green;
+    position: fixed;
+    left:2%;
+    top:40%;
+  }
+
+  .right {
+    background-color: red;
+    position: fixed;
+    right:2%;
+    top:40%;
+  }
+  .archive_link {
     font-family: fantasy;
     font-size: 4vh;
     color:#41414D;
@@ -161,10 +173,12 @@ a{
   }
 
   .post_carousel {
+    height: 74vh;
     top:0;
     padding-top: 5vh;
     flex-direction: row;
     gap: 0;
+    transition: 500ms ease-in-out;
   }
 
   .post_title {

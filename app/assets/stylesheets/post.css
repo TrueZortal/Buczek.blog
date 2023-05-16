@@ -1,6 +1,7 @@
 .individual_post_highlightbox {
   background-color: #41414d;
-  border-radius: 5%;
+  height: auto;
+  min-height: 5vh;
 }
 
 .individual_post_title {
@@ -22,6 +23,21 @@
   padding:3%;
   animation: appear 2s;
   overflow: auto;
+}
+
+.goback_btn {
+  display:block;
+  text-align: center;
+  padding-top: 1vh;
+  font-family: fantasy;
+  font-size:2vh;
+  width: 100%;
+  color: #41414d;
+}
+
+.goback_btn:hover {
+  background-color: #41414d3b;
+  transition: 500ms;
 }
 
 @keyframes appear {

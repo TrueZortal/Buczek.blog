@@ -11,17 +11,10 @@ export default class extends Controller {
     }, 2000)
   }
 
-  removeAnimation(e) {
-    // if (e.currentTarget.className != 'link_box_inplace') {
-    //   e.currentTarget.className += '_inplace';
-    //   e.currentTarget.dataset.action = 'click->menu#rollup'
-    // }
-  }
-
   rollup(e) {
-    var box = document.getElementsByClassName('menu')[0]
-    var banner = document.getElementsByClassName('banner')[0]
-    var static_menu = document.getElementById('menu_static')
+    let box = document.getElementsByClassName('menu')[0]
+    let banner = document.getElementsByClassName('banner')[0]
+    let static_menu = document.getElementById('menu_static')
     box.className += '_floatingoff'
     banner.className += '_floatingoff'
 
