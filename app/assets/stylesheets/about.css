@@ -1,0 +1,31 @@
+.about_body {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: normal;
+  padding: 3%;
+  z-index: 5;
+  background-color: #eff0f235;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2%;
+  animation: appear 3s;
+}
+
+@media only screen and (min-width: 1050px){
+  .about_body {
+    flex-direction: row;
+  }
+}
+
+.about_text {
+  font-family: fantasy;
+  font-size: 2vh;
+  color: #41414D;
+}
+
+@keyframes appear {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
+

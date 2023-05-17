@@ -63,38 +63,6 @@ body {
   }
 }
 
-@keyframes floatUp {
-  0% { transform: translateY(0px) }
-  100% {
-    transform: translateY(-600px);
-    opacity: 0%
-    }
-}
-
-.about_body {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overflow-wrap: normal;
-  padding: 3%;
-  z-index: 5;
-  background-color: #eff0f235;
-  border-radius: 2%;
-  animation: appear 3s;
-}
-
-.project_body {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overflow-wrap: normal;
-  padding: 3%;
-  z-index: 5;
-  background-color: #eff0f235;
-  border-radius: 2%;
-  animation: appear 3s;
-}
-
 .seaoffog {
   background-image: url('seaoffog_v2.jpeg');
   z-index: -999;
@@ -110,6 +78,34 @@ body {
   -moz-animation: fadeIn 10s;
   -o-animation: fadeIn 10s;
   -ms-animation: fadeIn 10s;
+}
+
+.cookies {
+  position:fixed;
+  z-index: 5;
+  bottom:10%;
+  width: 100vw;
+  min-height: 5%;
+  margin:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: appear 1s;
+  transition: 100%;
+  background-color: #41414D;
+}
+
+.cookies_text {
+  width: 60%;
+  text-align: center;
+  font-family: fantasy;
+  color: rgb(161, 142, 140);
+}
+
+.cookie_button {
+  font-size: 2vh;
+  width: 5%;
+  min-width: 50px;
 }
 
 .footer {
@@ -133,6 +129,14 @@ body {
   gap: 10px;
   font-family: fantasy;
   font-size: 1vh;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0px) }
+  100% {
+    transform: translateY(-600px);
+    opacity: 0%
+    }
 }
 
 @keyframes fadeIn {

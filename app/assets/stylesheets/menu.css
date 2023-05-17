@@ -21,9 +21,28 @@
   z-index: 4;
 }
 
-.menu_text {
+.menu_text_blog {
   text-align: center;
   text-justify: center;
+  opacity: 100%;
+  color: #41414D;
+  font-family: fantasy;
+  font-size: 4vh;
+}
+
+.menu_text_about {
+  text-align: center;
+  text-justify: center;
+  opacity: 100%;
+  color: #41414D;
+  font-family: fantasy;
+  font-size: 4vh;
+}
+
+.menu_text_projects {
+  text-align: center;
+  text-justify: center;
+  opacity: 100%;
   color: #41414D;
   font-family: fantasy;
   font-size: 4vh;
@@ -124,7 +143,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -2vh;
   width: 100%;
   height: 100%;
 }
@@ -161,16 +179,56 @@
     background: linear-gradient(0deg, rgba(236,132,57,0.2679665616246498) 0%, rgba(137,133,157,0.444437149859944) 100%);
   }
 
+  .blog_tile {
+    background-image: url("blog.png");
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .about_tile {
+    background-image: url("about.png");
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .projects_tile {
+    background-image: url("projects.png");
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .menu_text_blog {
+    position: absolute;
+    top: 95%;
+    color: #41414D;
+    font-family: fantasy;
+    font-size: 4vh;
+  }
+
+  .menu_text_about {
+    position: absolute;
+    top: 95%;
+    opacity: 100%;
+    color: #41414D;
+    font-family: fantasy;
+    font-size: 4vh;
+  }
+
+  .menu_text_projects {
+    position: absolute;
+    top: 95%;
+    opacity: 100%;
+    color: #41414D;
+    font-family: fantasy;
+    font-size: 4vh;
+  }
+
   .menu {
     border:0;
     margin-top: 0;
     margin-bottom: 25vh;
     flex-direction: row;
     align-content: normal;
-  }
-
-  .menu_text {
-    font-size: 4vh;
   }
 
   .menu_floatingoff {
@@ -222,27 +280,4 @@
   }
   80% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
-}
-
-@keyframes floatCloud {
-  from, to {
-    transform: translate(0px, 0px)
-  }
-
-  10% { transform: translate(-2px, 3px); }
-  20% { transform: translate(3px, 5px); }
-  30% {
-    transform: translate(1px, -1px);
-  }
-  40% { transform: translate(5px, -7px); }
-  50% {
-    transform: translate(3px, -2px);
-  }
-  60% { transform: translate(-6px, 2px); }
-  70% {
-    transform: translate(3px, -1px);
-  }
-  80% { transform: translate(-4px, 3px); }
-  90% { transform: translate(2px, -2px); }
-
 }

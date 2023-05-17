@@ -3,8 +3,12 @@
       <%= link_to 'New Post', new_post_path, data: { turbo_frame: "main" }, class: "btn btn--admin" %>
   <% end %>
   <div class = "posts_navigation">
-    <div class = "navigation_button right" id = "posts_forward" data-controller = "carousel" data-action="click->carousel#scrollRight"></div>
-    <div class = "navigation_button left" id = "posts_forward" data-controller = "carousel" data-action="click->carousel#scrollLeft"></div>
+    <div class = "navigation_button right" id = "posts_forward" data-controller = "carousel" data-action="click->carousel#scrollRight">
+      <div class = "arrow_right"></div>
+    </div>
+    <div class = "navigation_button left" id = "posts_backwards" data-controller = "carousel" data-action="click->carousel#scrollLeft">
+      <div class = "arrow_left"></div>
+    </div>
     <div class = "post_carousel" id = "posts_car">
       <% @posts.each do |post| %>
         <div class = "post_box">
