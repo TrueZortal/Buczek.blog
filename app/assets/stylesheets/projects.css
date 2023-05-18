@@ -57,8 +57,8 @@
 }
 
 .ugmssk_image {
-  max-width: 100%;
-
+  width: auto;
+  height: auto;
 }
 
 .console_ugmssk {
@@ -67,18 +67,18 @@
 }
 
 .console_ugmssk_image {
-  max-width: 50%;
-
+  width: auto;
+  height: auto;
 }
 
 .blog {
   display: grid;
   grid-area: 3 / 1;
-
 }
 
 .blog_image {
-  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .timers {
@@ -87,7 +87,8 @@
 }
 
 .timers_image {
-  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .project_title_text {

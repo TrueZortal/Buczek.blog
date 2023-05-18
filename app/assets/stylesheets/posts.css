@@ -100,10 +100,10 @@ a{
 
 .post_box {
   display: block;
-  min-width: 400px;
-  min-height: 200px;
-  height: 66%;
-  width: 100%;
+  min-width: 200px;
+  min-height: 150px;
+  /* height: 66%;
+  width: 100%; */
   margin: 2vw;
   background: rgb(236,132,57);
   background: linear-gradient(0deg, rgba(236,132,57,0.2679665616246498) 0%, rgba(137,133,157,0.444437149859944) 100%);
@@ -125,6 +125,7 @@ a{
 }
 
 @media only screen and (min-width: 1050px){
+
   .posts_navigation {
     display: flex;
     overflow-x: auto;
@@ -194,6 +195,8 @@ a{
   }
 
   .post_box {
+    min-width: 400px;
+    min-height: 200px;
     margin-bottom: 5vh;
   }
 
@@ -212,6 +215,35 @@ a{
 
   .post_title {
     font-size: 3vh;
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  .posts_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts_navigation {
+    padding: 0;
+    top:0;
+    position: absolute;
+  }
+
+  .archive_list {
+    display:flex;
+  }
+
+  .archive_link {
+    display: none;
+  }
+
+  .post_carousel {
+    padding-top: 0;
+  }
+
+  .post_box{
+    height: 25%;
   }
 }
 

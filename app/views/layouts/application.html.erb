@@ -3,6 +3,7 @@
   <head>
     <title>BuczekBlog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Buczek.blog - Personal blog of Mateusz Buczek: an analyst, psychologist, programmer and someone who loves writing. Here you'll find a bit of all of the things mentioned before">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,8 +13,6 @@
 
   <body>
     <%= yield %>
-    <%# # TODO:  ADD COOKIE POPUP BOTTOM %>
-    <%# # TODO:  STYLE ALERTS %>
     <% if notice %> <p class="alert alert-success"><%= notice %></p> <% end %>
     <% if alert %> <p class="alert alert-danger"><%= alert %></p> <% end %>
     <%= render partial: "shared/cookies"%>

@@ -77,7 +77,7 @@
 
 .link_box {
   margin:1vh;
-  min-width: 300px;
+  min-width: 200px;
   height: 15%;
   opacity: 100%;
   -webkit-box-shadow: 8px 8px 27px -5px rgba(47, 55, 47, 1);
@@ -91,7 +91,7 @@
 
 .link_box_inplace {
   margin:1vh;
-  min-width: 300px;
+  min-width: 200px;
   height: 15%;
   opacity: 100%;
   -webkit-box-shadow: 8px 8px 27px -5px rgba(47, 55, 47, 1);
@@ -160,7 +160,7 @@
 @media only screen and (min-width: 1050px){
   .link_box {
     height: 33%;
-    width: 12.5%;
+    width: 25%;
     margin: 2vw;
     margin-top: 30vh;
     margin-bottom: 2vh;
@@ -170,7 +170,7 @@
 
   .link_box_inplace {
     height: 33%;
-    width: 12.5%;
+    width: 25%;
     text-align: center;
     margin: 2vw;
     margin-top: 30vh;

@@ -17,8 +17,12 @@
     flex-direction: row;
   }
 }
+.profilepic {
+  padding-top: 2%;
+}
 
 .about_text {
+  padding: 2%;
   font-family: fantasy;
   font-size: 2vh;
   color: #41414D;
