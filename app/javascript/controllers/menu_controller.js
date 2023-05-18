@@ -11,6 +11,7 @@ export default class extends Controller {
     }, 2000)
   }
 
+  // TODO: Fix clicking the link too soon breaking the website
   rollup(e) {
     let box = document.getElementsByClassName('menu')[0]
     let banner = document.getElementsByClassName('banner')[0]

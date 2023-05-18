@@ -1,5 +1,4 @@
 <%= turbo_frame_tag "main" do %>
-<div class = "posts_wrapper">
   <% if user_signed_in? && current_user.admin %>
       <%= link_to 'New Post', new_post_path, data: { turbo_frame: "main" }, class: "btn btn--admin" %>
   <% end %>
@@ -14,6 +13,7 @@
       <% @posts.each do |post| %>
         <div class = "post_box">
           <%= link_to post_path(post.id) do %>
+          #TODO: change post_art styling to fit div
           <div class = "post_art" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)">
             <div class = "post_title_box">
               <p class = "post_title">
@@ -30,6 +30,4 @@
       <%= link_to 'View the full posts archive..', archive_path, data: { turbo_frame: "main" }, class: "archive_link" %>
     </div>
   </div>
-    <%= render partial: "shared/archive" %>
-</div>
 <% end %>
