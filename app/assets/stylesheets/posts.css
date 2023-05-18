@@ -195,6 +195,7 @@ a{
   }
 
   .post_box {
+    height: 60%;
     min-width: 400px;
     min-height: 200px;
     margin-bottom: 5vh;
@@ -216,6 +217,10 @@ a{
   .post_title {
     font-size: 3vh;
   }
+
+  .archive_list {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1600px){
@@ -231,7 +236,9 @@ a{
   }
 
   .archive_list {
+    top:35%;
     display:flex;
+    height: 60%;
   }
 
   .archive_link {
