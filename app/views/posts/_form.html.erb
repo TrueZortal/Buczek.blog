@@ -1,4 +1,5 @@
 <%= turbo_frame_tag "main" do %>
+<div class = "post_controls_wrapper">
   <%= form_with model: @post do |form| %>
 
 <% if @post.errors.any? %>
@@ -27,5 +28,6 @@
       <%= form.submit %>
   </div>
   <% end %>
-<%= link_to "go back", root_path%>
+        <%= link_to "go back", posts_path, class: "goback_btn" %>
+</div>
 <% end %>

@@ -40,6 +40,12 @@
   transition: 500ms;
 }
 
+.post_controls_wrapper{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
 @keyframes appear {
   0% { opacity: 0%; }
   100% { opacity: 100%; }
