@@ -7,7 +7,7 @@
 <div class = "signature">
   <p>Mateusz Buczek 2023   </p>
   <% if user_signed_in? %>
-      <%= link_to "log out #{current_user.email}", destroy_user_session_path, class: "nav_link_log"%>
+      <%= link_to "log out #{current_user.email}", destroy_user_session_path, class: "nav_link"%>
     <% else %>
       <%= link_to "log in", new_user_session_path, class: "nav_link nav_link_log" %>
     <% end %>

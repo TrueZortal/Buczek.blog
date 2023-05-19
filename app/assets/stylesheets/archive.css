@@ -20,12 +20,14 @@
 }
 
 .archive_title {
+  font-size: 3vh;
   font-family: fantasy;
   color: #41414D;
   font-weight: bold;
 }
 
 .archive_short {
+  font-size: 2vh;
   font-family: fantasy;
   color: #41414D;
 }
@@ -35,12 +37,23 @@
   text-decoration: none;
   position: absolute;
   right:0;
-  bottom: 5px;
+  bottom: -5%;
   color: #41414D;
 }
 
 .read_more_link:hover {
   font-weight: bolder;
+}
+
+@media only screen and (min-width: 1050px){
+  .archive_title {
+    font-size: 3vh;
+    font-weight: bold;
+  }
+
+  .archive_short {
+    font-size: 2vh;
+  }
 }
 
 @keyframes appear {

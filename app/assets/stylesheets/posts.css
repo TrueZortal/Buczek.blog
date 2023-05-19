@@ -90,14 +90,6 @@ a{
   top: 8%;
 }
 
-.date_time {
-  position:absolute;
-  bottom: 0;
-  right: 10px;
-  font-family: fantasy;
-  color:#41414D;
-}
-
 .post_box {
   display: block;
   min-width: 200px;
@@ -122,6 +114,10 @@ a{
   -webkit-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   -moz-box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
   box-shadow: 8px 8px 27px -11px rgba(47, 55, 47, 1);
+}
+
+.post_art {
+  border-radius: 5%;
 }
 
 @media only screen and (min-width: 1050px){

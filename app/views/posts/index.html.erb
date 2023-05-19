@@ -13,14 +13,12 @@
       <% @posts.each do |post| %>
         <div class = "post_box">
           <%= link_to post_path(post.id) do %>
-          #TODO: change post_art styling to fit div
           <div class = "post_art" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)">
             <div class = "post_title_box">
               <p class = "post_title">
                 <%= post.title %>
               </p>
             </div>
-            <p class = "date_time"> <%= post.updated_at.to_formatted_s(:long) %> </p>
           </div>
           <% end %>
         </div>

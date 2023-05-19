@@ -6,12 +6,10 @@ export default class extends Controller {
     setTimeout(() => {
       for (let box of boxes) {
         box.className += '_inplace';
-        box.dataset.action = 'click->menu#rollup'
       }
     }, 2000)
   }
 
-  // TODO: Fix clicking the link too soon breaking the website
   rollup(e) {
     let box = document.getElementsByClassName('menu')[0]
     let banner = document.getElementsByClassName('banner')[0]

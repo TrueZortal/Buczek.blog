@@ -16,7 +16,7 @@ body {
   width: 95vw;
   height: 85vh;
   overflow: hidden;
-  z-index: -5;
+  z-index: -1;
   animation: appear 2s;
 }
 
@@ -39,7 +39,7 @@ body {
   text-align: center;
   color: #41414D;
   opacity: 70%;
-  font-size: 8vh;
+  font-size: 7vh;
   font-family: fantasy;
   animation: floatUp 3s;
 }
@@ -78,6 +78,26 @@ body {
   -moz-animation: fadeIn 10s;
   -o-animation: fadeIn 10s;
   -ms-animation: fadeIn 10s;
+}
+
+.alert {
+  position:fixed;
+  display: flex;
+  z-index: 5;
+  top:15%;
+  width: 100vw;
+  min-height: 5%;
+  margin:0;
+  align-items: center;
+  justify-content: center;
+  background-color: #41414D;
+}
+
+.alert-success {
+  text-align: center;
+  font-size: 2vh;
+  font-family: fantasy;
+  color: #A18D8B;
 }
 
 .cookies {
@@ -147,6 +167,11 @@ body {
 @keyframes appear {
   0% { opacity: 0%; }
   100% { opacity: 100%; }
+}
+
+@keyframes disappear {
+  0% { opacity: 100%; }
+  100% { opacity: 0%; }
 }
 
 @keyframes appearBanner {

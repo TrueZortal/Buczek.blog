@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 4;
 }
 
 .menu_text_blog {
