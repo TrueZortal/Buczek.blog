@@ -107,7 +107,7 @@ body {
   width: 100vw;
   min-height: 5%;
   margin:0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   animation: appear 1s;
