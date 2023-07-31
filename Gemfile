@@ -34,6 +34,13 @@ gem 'jbuilder'
 gem 'redis', '~> 4.0'
 gem 'devise'
 
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-asdf'
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
