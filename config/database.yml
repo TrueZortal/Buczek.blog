@@ -14,14 +14,21 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: BuczekBlog_developement
   pool: 5
-  username: postgres
-  password: ENV['BLOGPW']
   timeout: 5000
+
+production:
+  <<: *default
+  url: ENV.fetch('DATABASE_URL')
+
+development:
+  <<: *default
+  database: BuczekBlog_developement
+  username: postgres
+  password: ENV.fetch('BLOGPW')
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
