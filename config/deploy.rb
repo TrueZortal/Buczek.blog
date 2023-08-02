@@ -13,7 +13,7 @@ set :deploy_to, "/home/buczekblog/#{fetch :application}"
 # before "deploy:assets:precompile", "bundle:install"
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
-append :linked_files, "config/master.key"
+append :linked_files, "config/master.key", "config/credentials.yml.enc"
 # , "config/credentials/production.key"
 
 # Only keep the last 5 releases to save disk space
