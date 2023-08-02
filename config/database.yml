@@ -22,7 +22,7 @@ default: &default
 
 production:
   <<: *default
-  url: ENV.fetch('DATABASE_URL')
+  url: <%=ENV.fetch('DATABASE_URL')%>
 
 development:
   <<: *default
