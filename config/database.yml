@@ -26,9 +26,9 @@ production:
 
 development:
   <<: *default
-  database: BuczekBlog_developement
-  username: postgres
-  password: ENV.fetch('BLOGPW')
+  database: buczekblog_developement
+  username: buczekblog
+  password: <%=ENV['BLOGPW']%>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -53,6 +53,6 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: BuczekBlog
-  username: postgres
+  database: buczekblog_test
+  username: buczekblog
   password: ENV['BLOGPW']
