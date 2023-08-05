@@ -3,11 +3,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   def index
-    @posts = Post.ordered
+    @posts = Post.ordered(created_at: :desc)
   end
 
   def archive
-    @posts = Post.ordered
+    @posts = Post.ordered(created_at: :desc)
   end
 
   def show
