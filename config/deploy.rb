@@ -3,7 +3,7 @@ lock "~> 3.17.3"
 
 set :application, "buczekblog"
 set :repo_url, "git@github.com:TrueZortal/Buczek.blog.git"
-set :branch, "deploying_to_a_droplet"
+set :branch, "main"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
