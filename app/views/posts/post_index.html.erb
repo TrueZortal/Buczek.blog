@@ -2,21 +2,21 @@
   <div data-turbo-permanent>
       <nav class = "menu_static" id = "menu_static" style = "display:flex;">
         <div class = "top_selection">
-          <%= link_to posts_path, data: { turbo_frame: "main" } , class: "top_link" do %>
+          <%= link_to posts_path, data: { turbo_frame: "main", turbo_action: "replace" } , class: "top_link" do %>
             <div class = "inner_container_top">
              <p>Posts</p>
             </div>
           <% end %>
         </div>
         <div class = "top_selection">
-          <%= link_to about_path, data: { turbo_frame: "main" }, class: "top_link" do %>
+          <%= link_to about_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "top_link" do %>
             <div class = "inner_container_top">
               <p>About</p>
             </div>
           <% end %>
         </div>
         <div class = "top_selection">
-          <%= link_to projects_path, data: { turbo_frame: "main" }, class: "top_link" do %>
+          <%= link_to projects_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "top_link" do %>
             <div class = "inner_container_top ">
               <p>Projects</p>
             </div>
