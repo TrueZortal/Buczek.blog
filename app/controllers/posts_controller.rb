@@ -6,6 +6,15 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc)
   end
 
+  def post_index
+    @post = Post.find(params['id'])
+    @comments = Comment.where(post_id: @post.id)
+  end
+
+  def posts_index
+    @posts = Post.order(created_at: :desc)
+  end
+
   def archive
     @posts = Post.order(created_at: :desc)
   end
@@ -18,6 +27,8 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def edit; end
+
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -26,8 +37,6 @@ class PostsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-  def edit; end
 
   def update
     if @post.update(post_params)

@@ -1,0 +1,60 @@
+<div class="container">
+  <div data-turbo-permanent>
+    <nav class = "menu_static" id = "menu_static" style = "display:flex;">
+      <div class = "top_selection">
+        <%= link_to posts_path, data: { turbo_frame: "main", turbo_action: "replace"  } , class: "top_link" do %>
+          <div class = "inner_container_top">
+            <p>Posts</p>
+          </div>
+        <% end %>
+      </div>
+      <div class = "top_selection">
+        <%= link_to about_path, data: { turbo_frame: "main", turbo_action: "replace"  }, class: "top_link" do %>
+          <div class = "inner_container_top">
+            <p>About</p>
+          </div>
+        <% end %>
+      </div>
+      <div class = "top_selection">
+        <%= link_to projects_path, data: { turbo_frame: "main", turbo_action: "replace"  }, class: "top_link" do %>
+          <div class = "inner_container_top ">
+            <p>Projects</p>
+          </div>
+        <% end %>
+      </div>
+    </nav>
+  </div>
+  <div class = "seaoffog"></div>
+  <div class = "main_display">
+    <%= turbo_frame_tag "main" do %>
+      <% if user_signed_in? && current_user.admin %>
+        <%= link_to 'New Post', new_post_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "btn btn--admin" %>
+      <% end %>
+      <div class = "posts_navigation">
+        <div class = "navigation_button right" id = "posts_forward" data-controller = "carousel" data-action="click->carousel#scrollRight">
+          <div class = "arrow_right"></div>
+        </div>
+        <div class = "navigation_button left" id = "posts_backwards" data-controller = "carousel" data-action="click->carousel#scrollLeft">
+        <div class = "arrow_left"></div>
+      </div>
+      <div class = "post_carousel" id = "posts_car">
+        <% @posts.each do |post| %>
+          <div class = "post_box">
+            <%= link_to post_path(post.id) do %>
+              <div class = "post_art" style="background-image: url(<%= url_for(post.thumbnail.variant(:thumb)) %>)">
+                <div class = "post_title_box">
+                  <p class = "post_title">
+                    <%= post.title %>
+                  </p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class = "archive_link_container">
+        <%= link_to 'View the full posts archive..', archive_path, data: { turbo_frame: "main" }, class: "archive_link" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -3,29 +3,29 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[show edit update destroy]
 
-  def show; end
-
   def index
     @comments = Comment.where(post_id: comment_params[:post_id])
   end
+
+  def show; end
 
   def new
     @comment = Comment.new
   end
 
+  def edit; end
+
   def create
     @comment = Comment.new(comment_params)
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to post_path(@comment.post_id), notice: "Comment added!"}
+        format.html { redirect_to post_path(@comment.post_id), notice: 'Comment added!' }
         format.turbo_stream
       else
         render :new, status: :unprocessable_entity
       end
     end
   end
-
-  def edit; end
 
   def update
     if @comment.update(comment_params)
@@ -44,7 +44,7 @@ class CommentsController < ApplicationController
   private
 
   def set_comment
-    p params
+    Rails.logger.debug params
     @comment = Comment.find(params[:id])
   end
 

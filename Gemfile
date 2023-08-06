@@ -17,7 +17,7 @@ gem 'pg'
 
 # Use the Puma web server [https://github.com/puma/puma]
 # gem 'puma', '~> 5.0'
-gem "passenger", ">= 5.3.2", require: "phusion_passenger/rack_handler"
+gem 'passenger', '>= 5.3.2', require: 'phusion_passenger/rack_handler'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
@@ -32,15 +32,15 @@ gem 'stimulus-rails'
 gem 'jbuilder'
 
 # Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
 gem 'devise'
+gem 'redis', '~> 4.0'
 
-gem 'capistrano', '~> 3.11'
-gem 'capistrano-rails', '~> 1.4'
-gem 'capistrano-passenger', '~> 0.2.0'
-gem 'capistrano-asdf'
-gem 'ed25519'
 gem 'bcrypt_pbkdf'
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-asdf'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rails', '~> 1.4'
+gem 'ed25519'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
