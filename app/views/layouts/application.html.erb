@@ -11,7 +11,7 @@
     <%= favicon_link_tag asset_path('favicon_small.png') %>
   </head>
 
-  <body>
+  <body data-controller='parallax'>
     <%= yield %>
     <%= render partial: "shared/alerts"%>
     <%= render partial: "shared/cookies"%>

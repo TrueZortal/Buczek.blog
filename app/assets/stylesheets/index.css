@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  width: 80%;
+  max-width: 1600px;
+  height: 200vh;
+  overflow-y: scroll;
+  border-left: 3px black solid;
+  border-right: 3px black solid;
+}
+
+#layer3_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  /* position:absolute; */
+  /* top: 100vh; */
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  background-color: #1f1818;
+}
+
+#layer1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1f181800;
+  background-image: url('layer1.png');
+  background-size: cover;
+  /* background-position: bottom; */
+  background-position: center;
+  height: 1200px;
+  width: 100%;
+}
+#layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1f181800;
+  background-image: url('layer2.png');
+  /* background-position: bottom; */
+  background-position: center;
+  background-size: cover;
+  height: 1200px;
+  width: 100%;
+}
+
+#layer3 {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  background-color: rgba(7, 90, 118, 0);
+  background-image: url('layer3.png');
+  background-position: center;
+  /* background-position: 50% -50px; */
+  background-size: cover;
+  height: 1200px;
+  width: 100%;
+}

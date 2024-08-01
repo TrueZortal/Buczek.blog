@@ -4,9 +4,12 @@
 }
 
 body {
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin:0px;
   background-color: #EFF0F2;
+  scroll-behavior: smooth;
 }
 
 .main_display {
