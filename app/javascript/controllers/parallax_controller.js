@@ -22,19 +22,21 @@ export default class extends Controller {
   onScroll(e) {
     var layer1 = document.getElementById('layer1');
     var layer2 = document.getElementById('layer2');
-    var layer3 = document.getElementById('layer3');
     var layer3_container = document.getElementById('layer3_container');
-    var content = document.getElementById('content');
 
     var scroll = window.scrollY;
-    var speed = 0.5;
+    var speed = 0.25;
 
-    console.log(e.target);
+    var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight,
+      document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 
-    layer1.style.top = -scroll * 0.25 + 'px';
-    // layer2.style.opacity = 1 - scroll / 750;
-    layer2.style.top = -scroll * speed + 'px';
-    layer3_container.style.top = -scroll + 'px';
+    if (scroll > limit - layer3_container.offsetHeight/2) {
+      return;
+    } else {
+      layer1.style.top = scroll * 0.25 + 'px';
+      layer2.style.top = scroll * speed + 'px';
+      // layer3_container.style.top = -scroll + 'px';
+    }
   }
 
 }

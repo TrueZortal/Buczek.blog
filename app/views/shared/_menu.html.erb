@@ -1,48 +1,30 @@
 <nav class = "menu_static" id = "menu_static">
-    <div class = "top_selection">
-      <%= link_to posts_path, data: { turbo_frame: "main", turbo_action: "replace" } , class: "top_link" do %>
-        <div class = "inner_container_top">
-          <p>Posts</p>
-      </div>
-      <% end %>
+  <%= link_to posts_path, class: "nav_link_cont", data: { controller: "menu" } do %>
+    <div id="blog_sketch"></div>
+    <div id="blog_line_cont">
+      <div class="line"></div>
+      <div class="nav_link">Blog</div>
     </div>
-    <div class = "top_selection">
-      <%= link_to about_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "top_link" do %>
-        <div class = "inner_container_top">
-          <p>About</p>
-        </div>
-      <% end %>
+  <% end %>
+  <%= link_to projects_path, class: "nav_link_cont" do %>
+    <div id="projects_sketch"></div>
+    <div id="projects_line_cont">
+      <div class="line"></div>
+      <div class="nav_link">Projects</div>
     </div>
-    <div class = "top_selection">
-      <%= link_to projects_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "top_link" do %>
-        <div class = "inner_container_top ">
-          <p>Projects</p>
-        </div>
-      <% end %>
+  <% end %>
+  <%= link_to '#', class: "nav_link_cont" do %>
+    <div id="fiction_sketch"></div>
+    <div id="fiction_line_cont">
+      <div class="line"></div>
+      <div class="nav_link">Fiction</div>
     </div>
+  <% end %>
+  <%= link_to about_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "nav_link_cont" do %>
+    <div id="about_sketch"></div>
+    <div id="about_line_cont">
+      <div class="line"></div>
+      <div class="nav_link">About</div>
+    </div>
+  <% end %>
 </nav>
-<div class = "menu_wrapper">
-  <nav class = "menu">
-    <div class = "link_box" data-controller = "menu" data-action="click->menu#rollup" >
-      <%= link_to posts_path, data: { turbo_frame: "main", turbo_action: "replace" } , class: "nav_link" do %>
-      <div class = "inner_container blog_tile">
-          <p class = "menu_text_blog">Blog</p>
-        </div>
-      <% end %>
-    </div>
-    <div class = "link_box" data-controller = "menu" data-action="click->menu#rollup" >
-      <%= link_to about_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "nav_link" do %>
-        <div class = "inner_container about_tile">
-          <p class = "menu_text_about">About</p>
-        </div>
-      <% end %>
-    </div>
-    <div class = "link_box" data-controller = "menu" data-action="click->menu#rollup" >
-      <%= link_to projects_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "nav_link" do %>
-      <div class = "inner_container projects_tile">
-          <p class = "menu_text_projects">Projects</p>
-        </div>
-      <% end %>
-    </div>
-  </nav>
-</div>

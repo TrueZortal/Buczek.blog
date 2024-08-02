@@ -59,21 +59,6 @@
   animation: floatBackDown 2s;
 }
 
-.menu_static {
-  position: absolute;
-  display: flex;
-  gap: 2vw;
-  left:0;
-  top:0;
-  width:95vw;
-  height: 5vh;
-  opacity: 100%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  animation: floatDown 1s;
-}
-
 .link_box {
   margin:1vh;
   min-width: 200px;
@@ -144,16 +129,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-.nav_link {
-  font-family: fantasy;
-  font-size: 2vh;
-  margin:0;
-}
-
-.nav_link_log {
-  margin-right: 1vw;
 }
 
 @media only screen and (min-width: 1050px){
@@ -236,10 +211,6 @@
     margin-bottom: 25vh;
     flex-direction: row;
     align-content: normal;
-  }
-
-  .menu_static {
-   height: 10vh;
   }
 
   .top_selection {

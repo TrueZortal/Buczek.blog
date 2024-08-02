@@ -8,8 +8,16 @@ body {
   align-items: center;
   justify-content: center;
   margin:0px;
-  background-color: #EFF0F2;
+  /* background-color: #41597c; */
+  /* background-color: #637281; */
+  /* background: rgb(123, 120, 173); */
+  background-color: eee7d7;
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #41414D;
 }
 
 .main_display {
@@ -24,8 +32,7 @@ body {
 }
 
 .banner {
-  position: absolute;
-  margin-top: 3vh ;
+  margin-top: 10vh ;
   width: 100vw;
   text-align: center;
   color: #41414D;
@@ -132,6 +139,7 @@ body {
 }
 
 .footer {
+  z-index: 3;
   position:fixed;
   bottom:0;
   width: 100vw;
