@@ -1,12 +1,15 @@
-<%= turbo_frame_tag "main" do %>
-  <div class = "archive_list">
-    <% @posts.each do |post| %>
-      <div class = "archive_post">
-        <p class = "archive_title"><%= post.title %> - <%= post.created_at.to_formatted_s(:long) %></p>
-        <p class = "archive_short"><%= "#{post.content.to_plain_text.slice(0..240)}..." %></p>
-        <%= link_to 'read more', post_path(post.id), class: "read_more_link" %>
-      </div>
-      <br>
-    <% end %>
+<div class='container'>
+  <div id='content'>
+    <%= render partial: 'shared/menu_horizontal', locals: { active: :blog } %>
+    <div class = "archive_list">
+      <% @posts.each do |post| %>
+        <div class = "archive_post">
+          <p class = "archive_title"><%= post.title %> - <%= post.created_at.to_formatted_s(:long) %></p>
+          <p class = "archive_short"><%= "#{post.content.to_plain_text.slice(0..240)}..." %></p>
+          <%= link_to 'read more', post_path(post.id), class: "read_more_link" %>
+        </div>
+        <br>
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>

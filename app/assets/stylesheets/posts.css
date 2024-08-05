@@ -18,7 +18,7 @@
   padding: 3%;
   position: relative;
   height: 85vh;
-  width: 95vw;
+  width: 85vw;
   opacity: 100%;
   display: flex;
   flex-direction: column;
@@ -88,6 +88,7 @@ a{
   position: fixed;
   margin: auto;
   top: 8%;
+  right: 10%;
 }
 
 .post_box {
@@ -148,12 +149,12 @@ a{
   }
 
   .left {
-    left:2%;
+    left:8%;
     display: none;
   }
 
   .right {
-    right:2%;
+    right:8%;
   }
 
   .arrow_right {
@@ -186,7 +187,7 @@ a{
     position: fixed;
     margin: auto;
     top:75%;
-    right: 5%;
+    right: 10%;
   }
 
   .post_box {

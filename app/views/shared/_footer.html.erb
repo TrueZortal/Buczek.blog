@@ -5,6 +5,15 @@
     <%= mail_to "mtsbck@gmail.com", image_tag("mail_icon.png", size: "30x29", alt: "email icon")%>
   </div>
   <div class = "signature">
-    <p>&copy Mateusz Buczek 2023</p>
+    <% if is_admin %>
+      <%= link_to sign_out_path do %>
+        <p>&copy</p>
+      <% end %>
+    <% else %>
+      <%= link_to sign_in_path do %>
+        <p>&copy</p>
+      <% end %>
+    <% end %>
+    <p>Mateusz Buczek 2024</p>
   </div>
 </div>

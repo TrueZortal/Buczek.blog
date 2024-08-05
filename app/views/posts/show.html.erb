@@ -1,37 +1,22 @@
-<%= turbo_frame_tag "main" do %>
-  <div class = "post_body">
-    <div class = "individual_post_title_wrapper">
+<div class='container'>
+  <div id='content'>
+    <%= render partial: 'shared/menu_horizontal', locals: { active: :blog } %>
+    <div class = "post_body">
+      <div class = "individual_post_title_wrapper">
         <div class = "individual_post_highlightbox">
           <h1 class = "individual_post_title"><%= @post.title %></h1>
         </div>
       </div>
-    <div class = "gobackdiv">
+      <div class = "gobackdiv">
         <%= link_to "go back", posts_path, class: "goback_btn" %>
       </div>
-    <hr class = "full_line">
-    <p class = "post_content"><%= @post.content %></p>
-    <% if user_signed_in? && current_user.admin %>
-      <%= link_to "edit", edit_post_path, class: "btn btn--admin"%>
-      <%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
-    <% end %>
-    <br>
-    <%= turbo_frame_tag "comments" do %>
-    <% if user_signed_in? %>
-      <%= link_to "New comment",
-                  new_post_comment_path(post_id: @post.id) ,
-                  class: "btn btn--comment",
-                  data: { turbo_frame: dom_id(Comment.new)} %>
-    <% else %>
-      <h4> login to comment! </h4>
-    <% end%>
-    <%= turbo_frame_tag Comment.new %>
-    <hr class = "full_line">
-    <div id = "comment_block">
-      <% @comments.each do |comment| %>
-        <%= render partial: "comments/comment", locals: {comment: comment} %>
+      <hr class = "full_line">
+      <p class = "post_content"><%= @post.content %></p>
+      <% if is_admin %>
+        <%= link_to "edit", edit_post_path, class: "btn btn--admin"%>
+        <%= link_to "delete", @post, data: { turbo_method: :delete, turbo_confirm: "Deleting post, confirm?" }, class: "btn btn--admin"%>
       <% end %>
-      </div>
-    <% end %>
+      <br>
+    </div>
   </div>
-  </div>
-<% end %>
+</div>

@@ -1,0 +1,10 @@
+<div class='container'>
+  <div id='content'>
+    <div class='login-container'>
+      <%= form_with url: authorise_path, method: :post do |form| %>
+        <%= form.text_field :password, placeholder: 'password' %>
+        <%= form.submit 'login' %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,56 +1,58 @@
-<%= turbo_frame_tag "main" do %>
-  <div class = "body_wrapper">
-  <div class = "project_body">
-    <div class = "outer_project_block ugmssk">
-      <br>
-      <%= link_to  "Ultimate Giga Master Super Summoner King Online","https://zortalowa-gra.herokuapp.com/", class: "project_title_text", target: :_blank%>
-      <%= link_to  "Playable online strategy game","https://zortalowa-gra.herokuapp.com/", class: "project_title_subtext", target: :_blank%>
-        <div class = "project_block">
-          <p class = "project_text">
-          A web version of an earlier console based project. A fully playable 2-4 player strategy game where you summon your minions to achieve board domination.
-          An ongoing passion project, that will likely get it's own blog post at a later date, if only for the things that I've learned while working on it.
-        </p>
+<div class='container'>
+  <div id='content'>
+    <%= render partial: 'shared/menu_horizontal', locals: { active: :projects } %>
+      Add fancy timeline here
+      Do away with grids and create sections for each project with anchor links
+    <div class = "body_wrapper" id="body_wrapper" data-controller="timeline">
+      <div id='timeline'>
+        <div class='timeline-date'>
+          <h1>2024</h1>
+        </div>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'mateuszbuczek.com - more than a blog', partial: 'projects/buczekblogv2' } %>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'Summoner game - script browser auto battler', partial: 'projects/summoner_games' } %>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'Koduje.com - A teaching platform', partial: 'projects/koduje_com' } %>
+        <div class='timeline-date'>
+          <h1>2023</h1>
+        </div>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'Paleo Ninja - Top down platformer', partial: 'projects/paleo_ninja' } %>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'Summoner Game - Tower defense game', partial: 'projects/undead_game' } %>
+        <div class='timeline-date'>
+          <h1>2022</h1>
+        </div>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'Buczek.blog - A personal blog', partial: 'projects/buczekblog' } %>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'UGMSSK v2 - Multiplayer online strategy game', partial: 'projects/ugmssk' } %>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'Mindful Timers - timers for work hygiene', partial: 'projects/mindfultimers' } %>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'UGMSSK - Terminal strategy game', partial: 'projects/consoleugmssk' } %>
+        <div class='timeline-date'>
+          <h1>2020 - Started coding </h1>
+        </div>
+        <br>
+        <div class='timeline-date'>
+          <h1>2018 - Graduated Psychology at NUIG</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class='timeline-date'>
+          <h1>1988 - Project life has begun :-) </h1>
+        </div>
       </div>
     </div>
-    <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/summoner_game_online_blog.png", class: "ugmssk_image", size: "600x309"  %>
-    <div class = "outer_project_block console_ugmssk">
-      <br>
-      <%= link_to  "Ultimate Giga Master Super Summoner King","https://github.com/TrueZortal/projectXD", class: "project_title_text", target: :_blank %>
-      <%= link_to  "Playable (system) console strategy game","https://github.com/TrueZortal/projectXD", class: "project_title_subtext", target: :_blank %>
-        <div class = "project_block">
-          <p class = "project_text">
-          A terminal playable turn based strategy game loosely based on GGG's atrocious treatment of summoners in the last few sets of Path of Exile patchnotes. Desparate times require desperate measures.
-          It was either learn to code and make your own or Diablo immortal. On a relatively more serious note. This started as a fun little expansion on my initial idea of writing console chess, ended up as a fully playabe game that drove my latter foray back into rails to bring it to life.
-        </p>
-      </div>
-    </div>
-    <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/summoner_game_console.png", class: " console_ugmssk_image" %>
-
-      <div class = "outer_project_block blog">
-      <br>
-        <%= link_to  "Buczek.blog","https://github.com/TrueZortal/Buczek.blog", class: "project_title_text", target: :_blank %>
-          <div class = "project_block">
-            <p class = "project_text">
-            My personal website/blog. Started as a weekend project, with initial aim of being a summary of my year of coding and has since been somewhat improved. Like with other projects it's been a testing ground for new technologies and solutions
-            mainly focused on working with active storage in production, authorization using devise and working better with turbo.
-            </p>
-          </div>
-      </div>
-    <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/blog_blog.png", class: "blog_image", size:"600x327" %>
-
-    <div class = "outer_project_block timers">
-      <br>
-      <%= link_to  "Mindful-timers.io","https://www.mindful-timers.io", class: "project_title_text", target: :_blank %>
-      <%= link_to  "simple timers for improved mindfulness and work hygiene","https://www.mindful-timers.io", class: "project_title_subtext", target: :_blank %>
-        <div class = "project_block">
-          <p class = "project_text">
-          Passion project that was a bit more than bargained for. I was growing frustrated with my apparent inability to find simple online based timers that didn't try to sell me things/functions outside of being simple, easily set and repeatable.
-          Ended up being a fun lesson in asynchronous javascript functions, working with the dom and how relatively simple things can become complicated rapidly. Likely to be my first attempted port to an app at a later date. For now it does what it says on the tin. It's a website with timers.
-        </p>
-      </div>
-    </div>
-  <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/mindful_timers.png", class: "timers_image", size:"600x327" %>
   </div>
-  </div>
-<% end %>
-
+</div>

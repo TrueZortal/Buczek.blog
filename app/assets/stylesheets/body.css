@@ -8,10 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   margin:0px;
-  /* background-color: #41597c; */
-  /* background-color: #637281; */
-  /* background: rgb(123, 120, 173); */
-  background-color: eee7d7;
+  background-color: #eee7d7;
   scroll-behavior: smooth;
 }
 
@@ -38,28 +35,12 @@ a {
   color: #41414D;
   opacity: 70%;
   font-family: fantasy;
-  font-size: 7vh;
+  font-size: 6vh;
   animation: appearBanner 5s;
-}
-
-.banner_floatingoff {
-  position: absolute;
-  margin-top: 3vh ;
-  width: 100vw;
-  text-align: center;
-  color: #41414D;
-  opacity: 70%;
-  font-size: 7vh;
-  font-family: fantasy;
-  animation: floatUp 3s;
 }
 
 @media only screen and (min-width: 1050px){
   .banner {
-    font-size: 10vh;
-  }
-
-  .banner_floatingoff {
     font-size: 10vh;
   }
 
@@ -71,23 +52,6 @@ a {
   .footer {
     flex-direction: column;
   }
-}
-
-.seaoffog {
-  background-image: url('seaoffog_v2.webp');
-  z-index: -999;
-  position: absolute;
-  background-size: cover;
-  background-position: 50% 50%;
-  margin:0px;
-  height: 100%;
-  width: 100%;
-  opacity: 50%;
-  animation: fadeIn 10s;
-  -webkit-animation: fadeIn 10s;
-  -moz-animation: fadeIn 10s;
-  -o-animation: fadeIn 10s;
-  -ms-animation: fadeIn 10s;
 }
 
 .alert {
@@ -162,27 +126,9 @@ a {
   font-size: 1vh;
 }
 
-@keyframes floatUp {
-  0% { transform: translateY(0px) }
-  100% {
-    transform: translateY(-600px);
-    opacity: 0%
-    }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 100%;}
-  100% { opacity: 50%;}
-}
-
 @keyframes appear {
   0% { opacity: 0%; }
   100% { opacity: 100%; }
-}
-
-@keyframes disappear {
-  0% { opacity: 100%; }
-  100% { opacity: 0%; }
 }
 
 @keyframes appearBanner {

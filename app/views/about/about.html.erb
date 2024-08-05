@@ -1,19 +1,23 @@
-<%= turbo_frame_tag "main" do %>
-  <div class = "about_body">
+<div class='container'>
+  <div id='content'>
+    <%= render partial: 'shared/menu_horizontal', locals: { active: :about } %>
+    <div class = "about_body">
 
-    <div class = "profilepic">
-        <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/blog_pic.jpg", alt: "me :D", size: "220x260", class: "blog_pic"%>
+      <div class = "profilepic">
+          <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/blog_pic.jpg", alt: "me :D", size: "220x260", class: "blog_pic"%>
+      </div>
+
+      <p class = "about_text">
+        Hey there traveller! Welcome!
+        <br>
+        Name's Mateusz! Professionally I'm a Data & Business Analyst, currently finalizing my masters degree in Clinical Psychology. I code in Ruby, Rails and JS, dabbling in anything and everything else code related.
+        <br>
+        <br>
+        Less professionally I'm a reader of books, eater of apple pies(the cinamon-less kind!), a player of racquet sports, volleyball, board games and an odd platformer or soulslike.
+        <br>
+        <br>
+        This blog is a dumping ground for my stream of conciousness, miscellaneous writings and whatever else I might come up with. Whatever brought you here I hope you stay a while and enjoy my musings!
+      </p>
     </div>
-
-    <p class = "about_text">
-      Hey there traveller! Welcome!
-      <br>
-      Name's Mateusz! Professionally I'm a Data & Business Analyst, currently finalizing my masters degree in Clinical Psychology. I code in Ruby, Rails and JS, dabbling in anything and everything else code related.
-      <br>
-      <br>
-      Less professionally I'm a reader of books, eater of apple pies(the cinamon-less kind!), a player of racquet sports, volleyball, board games and an odd platformer or soulslike.
-      <br>
-      <br>
-      This blog is a dumping ground for my stream of conciousness, miscellaneous writings and whatever else I might come up with. Whatever brought you here I hope you stay a while and enjoy my musings!
-    </p>
-<% end %>
+  </div>
+</div>

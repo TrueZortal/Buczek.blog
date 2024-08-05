@@ -1,0 +1,70 @@
+<div class='container'>
+  <div id='content'>
+    <%= render partial: 'shared/menu_horizontal', locals: { active: :projects } %>
+    <div class = "body_wrapper">
+      Add fancy timeline here
+      Do away with grids and create sections for each project with anchor links
+      <div class = "project_body">
+        <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/summoner_game_online_blog.png", class: "ugmssk_image", size: "600x309"  %>
+        <div class = "outer_project_block">
+          <br>
+          <%= link_to  "Paleo Ninja","https://zortal.itch.io/paleo-ninja", class: "project_title_text", target: :_blank%>
+          <%= link_to  "Go down platformer, 20s Game Jam submission with Dragon Ruby","https://zortal.itch.io/paleo-ninja", class: "project_title_subtext", target: :_blank%>
+            <div class = "project_block">
+              <p class = "project_text">
+              A 20s game jam submission. A simple go down platformer where you play as a ninja trying to avoid obstacles and collect delicious meats in a purely described dystopian setting. Made with Dragon Ruby and love.
+            </p>
+          </div>
+        </div>
+        <div class = "outer_project_block ugmssk">
+          <br>
+          <%= link_to  "Ultimate Giga Master Super Summoner King Online","#", class: "project_title_text", target: :_blank%>
+          <%= link_to  "Playable online strategy game","#", class: "project_title_subtext", target: :_blank%>
+            <div class = "project_block">
+              <p class = "project_text">
+              A now deprecated web version of an earlier console based project. A fully playable 2-4 player strategy game where you summon your minions to achieve board domination.
+              A passion project that is likely to be revisited in the future. It was a fun lesson in working with websockets, hacking turbo updates to work with itself and the joys of debugging in a multiplayer environment.
+            </p>
+          </div>
+        </div>
+        <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/summoner_game_online_blog.png", class: "ugmssk_image", size: "600x309"  %>
+        <div class = "outer_project_block console_ugmssk">
+          <br>
+          <%= link_to  "Ultimate Giga Master Super Summoner King","https://github.com/TrueZortal/projectXD", class: "project_title_text", target: :_blank %>
+          <%= link_to  "Playable (system) console strategy game","https://github.com/TrueZortal/projectXD", class: "project_title_subtext", target: :_blank %>
+            <div class = "project_block">
+              <p class = "project_text">
+              A terminal playable turn based strategy game loosely based on GGG's atrocious treatment of classic summoners. Desparate times required desperate measures.
+              It was either learn to code and make your own or Diablo immortal or quit altogether. On a relatively more serious note. This started as a fun little expansion on my initial idea of writing console chess, ended up as a fully playabe game that drove my latter foray back into rails to bring it to life.
+            </p>
+          </div>
+        </div>
+        <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/summoner_game_console.png", class: " console_ugmssk_image" %>
+
+          <div class = "outer_project_block blog">
+          <br>
+            <%= link_to  "MateuszBuczek.com // Buczek.blog","https://github.com/TrueZortal/Buczek.blog", class: "project_title_text", target: :_blank %>
+              <div class = "project_block">
+                <p class = "project_text">
+                My personal website/blog. Started as a weekend project, with initial aim of being a summary of my year of coding and has since been somewhat improved. Like with other projects it's been a testing ground for new technologies and solutions
+                mainly focused on working with active storage in production, authorization using devise and working better with turbo. Now remade multiple times with the screenshots showing the previous iterations, and you browsing the newest one.
+                </p>
+              </div>
+          </div>
+        <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/blog_blog.png", class: "blog_image", size:"600x327" %>
+
+        <div class = "outer_project_block timers">
+          <br>
+          <%= link_to  "Mindful-timers.com","https://www.mindful-timers.com", class: "project_title_text", target: :_blank %>
+          <%= link_to  "simple timers for improved mindfulness and work hygiene","https://www.mindful-timers.com", class: "project_title_subtext", target: :_blank %>
+            <div class = "project_block">
+              <p class = "project_text">
+              A fun little side quest that taught me a lot about how JS code is executed client side that that pausin and unpausing timers isn't quite that simple if you want to make it scalable and interactive. Fun little experience.
+            </p>
+          </div>
+        </div>
+      <%= image_tag "https://buczek-blog-bucket.s3.eu-central-1.amazonaws.com/mindful_timers.png", class: "timers_image", size:"600x327" %>
+      </div>
+    </div>
+  </div>
+</div>

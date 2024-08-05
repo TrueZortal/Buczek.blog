@@ -4,6 +4,7 @@ export default class extends Controller {
 
   connect(){
     let cookies = document.getElementById("cookiebar")
+    console.log(document.cookie)
     if (document.cookie != "cookie=consent") {
       cookies.style.display = "flex";
     }

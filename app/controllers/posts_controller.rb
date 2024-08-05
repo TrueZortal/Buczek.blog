@@ -3,12 +3,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   def index
+    p is_admin
     @posts = Post.order(created_at: :desc)
-  end
-
-  def post_index
-    @post = Post.find(params['id'])
-    @comments = Comment.where(post_id: @post.id)
   end
 
   def posts_index
@@ -19,9 +15,7 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc)
   end
 
-  def show
-    @comments = Comment.where(post_id: @post.id)
-  end
+  def show; end
 
   def new
     @post = Post.new

@@ -1,11 +1,12 @@
 .about_body {
-  height: 100%;
+  /* height: 100%; */
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   overflow-wrap: normal;
   padding: 3%;
   z-index: 5;
-  background-color: #eff0f235;
+  background-color: #eff0f21c;
   display: flex;
   flex-direction: column;
   border-radius: 2%;
@@ -32,4 +33,3 @@
   0% { opacity: 0%; }
   100% { opacity: 100%; }
 }
-

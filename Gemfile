@@ -32,7 +32,6 @@ gem 'stimulus-rails'
 gem 'jbuilder'
 
 # Use Redis adapter to run Action Cable in production
-gem 'devise'
 gem 'redis', '~> 4.0'
 
 gem 'bcrypt_pbkdf'
