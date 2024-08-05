@@ -1,8 +1,6 @@
 <div class='container'>
   <div id='content'>
     <%= render partial: 'shared/menu_horizontal', locals: { active: :projects } %>
-      Add fancy timeline here
-      Do away with grids and create sections for each project with anchor links
     <div class = "body_wrapper" id="body_wrapper" data-controller="timeline">
       <div id='timeline'>
         <div class='timeline-date'>
@@ -15,7 +13,7 @@
           <h1>2023</h1>
         </div>
         <%= render partial: 'projects/timeline_element', locals: { title: 'Paleo Ninja - Top down platformer', partial: 'projects/paleo_ninja' } %>
-        <%= render partial: 'projects/timeline_element', locals: { title: 'Summoner Game - Tower defense game', partial: 'projects/undead_game' } %>
+        <%= render partial: 'projects/timeline_element', locals: { title: 'Undead Game - Tower defense', partial: 'projects/undead_game' } %>
         <div class='timeline-date'>
           <h1>2022</h1>
         </div>
@@ -28,7 +26,7 @@
         </div>
         <br>
         <div class='timeline-date'>
-          <h1>2018 - Graduated Psychology at NUIG</h1>
+          <h1>2018 - Graduated Psychology at National University of Ireland - Galway </h1>
         </div>
         <br>
         <br>
