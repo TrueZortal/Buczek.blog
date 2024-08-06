@@ -4,6 +4,20 @@
   background: url('dot.png') 7px top repeat-y;
 }
 
+.timeline-scroll {
+  cursor: pointer;
+  text-align: center;
+  color: #41414D;
+  font-family: fantasy;
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
+.timeline-scroll:hover {
+  text-shadow: 3px 3px 3px #717191;
+  transition: all ease 1s;
+}
+
 .timeline-date {
   width: 100%;
   margin: 0 25px auto;
@@ -74,7 +88,6 @@
 }
 
 .timeline-content-details-container-grid {
-  display: flex;
   width: 90%;
   margin: 0 50px auto;
   display: grid;
@@ -88,7 +101,7 @@
 }
 
 .timeline-element-summary {
-  width: 100%;
+  width: 95%;
   font-family: fantasy;
   font-size: 2.5vh;
   font-weight: bold;
@@ -97,7 +110,7 @@
 
 .body_wrapper {
   height: 80%;
-  width: 100%;
+  width: 95%;
   overflow-y: scroll;
   position: relative;
 }
@@ -140,6 +153,7 @@
   text-decoration: none;
   color: #41414D;
   transition: all ease 1s;
+  margin: 0;
 }
 
 .project_subtitle_text:hover {
@@ -155,6 +169,7 @@
   text-decoration: none;
   color: #41414D;
   transition: all ease 1s;
+  margin: 0;
 }
 
 .project_subtitle_text:hover {
@@ -162,8 +177,34 @@
   transition: all ease 1s;
 }
 
+.project_block {
+  width: 100%;
+}
+
 .project_text {
   font-family: fantasy;
   font-size: 2vh;
   color: #41414D;
+}
+
+@media only screen and (max-width: 1050px){
+  #timeline {
+    width: 80%;
+    margin: 0 5px auto;
+    background: url('dot.png') 7px top repeat-y;
+  }
+
+  .timeline-element-summary {
+    width: 90%;
+  }
+
+  .timeline-content-details-container-grid {
+    width: 90%;
+    margin: 0 25px auto;
+    display: grid;
+  }
+
+  .image {
+    max-width: 90%;
+  }
 }

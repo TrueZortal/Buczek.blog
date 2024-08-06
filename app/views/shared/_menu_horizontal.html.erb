@@ -1,6 +1,6 @@
 <nav class = "menu-horizontal">
   <%= link_to root_path, class: "nav_link_cont_horizontal", data: { controller: "menu" } do %>
-    <div class="nav_link_horizontal_home">mateuszbuczek.com</div>
+    <div class="nav_link_horizontal_home"><div><p class='logo-text'>mateusz</p></div><div><p class='logo-text'>buczek.com</p></div></div>
   <% end %>
   <%= link_to posts_path, class: "nav_link_cont_horizontal", data: { controller: "menu" } do %>
     <div class="nav_link_horizontal <%= 'link-active' if active == :blog %>">Blog</div>

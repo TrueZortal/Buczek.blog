@@ -2,6 +2,7 @@
   <div id='content'>
     <%= render partial: 'shared/menu_horizontal', locals: { active: :projects } %>
     <div class = "body_wrapper" id="body_wrapper" data-controller="timeline">
+      <div class = "timeline-scroll" data-action='click->timeline#scrollDown'><p>Click here if you'd like to start at the beggining</p></div>
       <div id='timeline'>
         <div class='timeline-date'>
           <h1>2024</h1>
@@ -26,7 +27,7 @@
         </div>
         <br>
         <div class='timeline-date'>
-          <h1>2018 - Graduated Psychology at National University of Ireland - Galway </h1>
+          <h1>2017 - Bachelor of Arts in Psychology  </h1>
         </div>
         <br>
         <br>
