@@ -53,6 +53,8 @@ a{
 }
 
 .post_art {
+  display: flex;
+  flex-direction: column-reverse;
   overflow: hidden;
   background-size: cover;
   height: 100%;
@@ -80,8 +82,7 @@ a{
 }
 
 .post_box {
-  display: flex;
-  flex-direction: column-reverse;
+  display: block;
   min-width: 200px;
   min-height: 150px;
   height: 66%;
