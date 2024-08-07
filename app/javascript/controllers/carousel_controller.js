@@ -18,7 +18,7 @@ export default class extends Controller {
     if (move > 0) {
       back.style.display = "flex" ;
     }
-    if (move <= car_width/2 + movement_amount) {
+    if (current_right <= car_width/2) {
       carousel.style.right = `${move}px`;
     }
     if (current_right >= car_width/2) {
