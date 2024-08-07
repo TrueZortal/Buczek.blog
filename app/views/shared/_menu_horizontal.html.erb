@@ -8,8 +8,8 @@
   <%= link_to projects_path, class: "nav_link_cont_horizontal" do %>
     <div class="nav_link_horizontal <%= 'link-active' if active == :projects %>">Projects</div>
   <% end %>
-  <%= link_to '#', class: "nav_link_cont_horizontal" do %>
-    <div class="nav_link_horizontal <%= 'link-active' if active == :fiction %>">Fiction</div>
+  <%= link_to creative_path, class: "nav_link_cont_horizontal" do %>
+    <div class="nav_link_horizontal <%= 'link-active' if active == :creative %>">Creative</div>
   <% end %>
   <%= link_to about_path, class: "nav_link_cont_horizontal " do %>
     <div class="nav_link_horizontal <%= 'link-active' if active == :about %>">About</div>

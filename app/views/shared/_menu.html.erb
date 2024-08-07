@@ -13,14 +13,14 @@
       <div class="nav_link">Projects</div>
     </div>
   <% end %>
-  <%= link_to '#', class: "nav_link_cont" do %>
+  <%= link_to creative_path, class: "nav_link_cont" do %>
     <div id="fiction_sketch"></div>
     <div id="fiction_line_cont">
       <div class="line"></div>
-      <div class="nav_link">Fiction</div>
+      <div class="nav_link">Creative</div>
     </div>
   <% end %>
-  <%= link_to about_path, data: { turbo_frame: "main", turbo_action: "replace" }, class: "nav_link_cont" do %>
+  <%= link_to about_path, class: "nav_link_cont" do %>
     <div id="about_sketch"></div>
     <div id="about_line_cont">
       <div class="line"></div>

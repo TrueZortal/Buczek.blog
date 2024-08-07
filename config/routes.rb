@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get '/about', to: 'about#about'
   get '/projects', to: 'projects#index'
   get '/archive', to: 'posts#archive'
+  get '/creative', to: 'creative#index'
 end
