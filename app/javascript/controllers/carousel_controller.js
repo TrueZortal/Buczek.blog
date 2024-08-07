@@ -21,12 +21,9 @@ export default class extends Controller {
     if (move <= car_width/2 + movement_amount) {
       carousel.style.right = `${move}px`;
     }
-    if (move - 150 >= car_width/2 ) {
+    if (current_right >= car_width/2) {
       forward.style.display = "none";
     }
-      console.log(`${current_right} current position`)
-      console.log(`${move} move amount`)
-      console.log(`${car_width/2 + movement_amount} stoppage`)
     }
 
   scrollLeft(e) {
