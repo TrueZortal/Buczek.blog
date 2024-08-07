@@ -192,6 +192,7 @@ a{
     flex-direction: row;
     gap: 0;
     transition: 500ms ease-in-out;
+    padding-bottom: 0;
   }
 
   .post_title {
