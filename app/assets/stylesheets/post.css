@@ -21,9 +21,9 @@
   overflow-x: hidden;
   overflow-wrap: normal;
   padding:3%;
-  padding-bottom: 10%;
   animation: appear 2s;
   overflow: auto;
+  padding-bottom: 150px;
 }
 
 .goback_btn {
@@ -47,11 +47,6 @@
   overflow: auto;
   padding-bottom: 10%;
 }
-
-/* .rich-text-area {
-  min-height: 30vh;
-  max-height: 50vh;
-} */
 
 @keyframes appear {
   0% { opacity: 0%; }
