@@ -1,0 +1,8 @@
+.creative-hole {
+ /* background-image: url('test_hole.png'); */
+ background-image: url('by_aruthins_will.png');
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 600px;
+ height: 600px;
+}

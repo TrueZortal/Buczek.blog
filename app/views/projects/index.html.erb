@@ -2,19 +2,25 @@
   <div id='content'>
     <%= render partial: 'shared/menu_horizontal', locals: { active: :projects } %>
     <div class = "body_wrapper" id="body_wrapper" data-controller="timeline">
-      <div class = "timeline-scroll" data-action='click->timeline#scrollDown'><p>Click here if you'd like to start at the beggining</p></div>
+      <div class = "timeline-scroll" data-action='click->timeline#scrollDown'><p>Click here if you'd like to start at the beggining, otherwise click into the projects to learn more</p></div>
       <div id='timeline'>
+        <div class='timeline-date'>
+          <h1>2025</h1>
+        </div>
+        <%= render partial: 'projects/timeline_element', locals: { title: "Krampus's Escape - an indie bullet hell", partial: 'projects/krampuss_escape' } %>
         <div class='timeline-date'>
           <h1>2024</h1>
         </div>
         <%= render partial: 'projects/timeline_element', locals: { title: 'mateuszbuczek.com - more than a blog', partial: 'projects/buczekblogv2' } %>
-        <%= render partial: 'projects/timeline_element', locals: { title: 'Summoner game - script browser auto battler', partial: 'projects/summoner_games' } %>
         <%= render partial: 'projects/timeline_element', locals: { title: 'Koduje.com - A teaching platform', partial: 'projects/koduje_com' } %>
         <div class='timeline-date'>
           <h1>2023</h1>
         </div>
         <%= render partial: 'projects/timeline_element', locals: { title: 'Paleo Ninja - Top down platformer', partial: 'projects/paleo_ninja' } %>
         <%= render partial: 'projects/timeline_element', locals: { title: 'Undead Game - Tower defense', partial: 'projects/undead_game' } %>
+        <div class='timeline-date'>
+          <h1> Masters in Clinical Psychology  </h1>
+        </div>
         <div class='timeline-date'>
           <h1>2022</h1>
         </div>
