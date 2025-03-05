@@ -205,6 +205,11 @@
   color: #41414D;
 }
 
+.youtube_frame {
+  width: 560px;
+  height: 315px;
+}
+
 @media only screen and (max-width: 1050px){
   #timeline {
     width: 80%;
@@ -224,5 +229,10 @@
 
   .image {
     max-width: 90%;
+  }
+
+  .youtube_frame {
+    width: 315px;
+    height: 200px;
   }
 }
