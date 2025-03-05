@@ -157,6 +157,13 @@
   height: auto;
 }
 
+.horizontal_image {
+  border-radius: 0.5rem;
+  max-width: 45%;
+  min-width: 300px;
+  height: auto;
+}
+
 .outer_project_block {
   display: flex;
   flex-direction: column;
@@ -228,11 +235,20 @@
   }
 
   .image {
-    max-width: 90%;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .horizontal_image {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 9/16;
   }
 
   .youtube_frame {
-    width: 315px;
-    height: 200px;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9;
   }
 }
